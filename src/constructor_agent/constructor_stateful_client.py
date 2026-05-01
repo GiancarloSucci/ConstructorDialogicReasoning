@@ -2,10 +2,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import os
-from typing import Optional
+from typing import Any, Optional
+import requests
 
 from constructor_agent.domain import EndpointSpec
-
+DEFAULT_API_URL = "https://training.constructor.app/api/platform-kmapi/v1"
 
 @dataclass(frozen=True)
 class ConstructorPlatformConfig:
@@ -22,6 +23,15 @@ class ConstructorPlatformConfig:
             api_key=os.getenv("CONSTRUCTOR_API_KEY"),
             km_id=os.getenv("CONSTRUCTOR_KM_ID"),
         )
+
+    def resolved_api_url(self) -> str:
+        return (self.api_url or os.getenv("CONSTRUCTOR_API_URL") or DEFAULT_API_URL).rstrip("/")
+
+    def resolved_api_key(self) -> str:
+        api_key = self.api_key or os.getenv("CONSTRUCTOR_API_KEY")
+        if not api_key:
+            raise RuntimeError("Missing CONSTRUCTOR_API_KEY.")
+        return api_key
 
 
 class StatefulConstructorClient:
@@ -82,3 +92,109 @@ class StatefulConstructorClient:
             kwargs["km_id"] = self.config.km_id
 
         return StatefulConstructorAdapter(**kwargs)
+
+    def list_language_models(self) -> list[ConstructorLanguageModelInfo]:
+        response = requests.get(
+            f"{self.config.resolved_api_url()}/language_models",
+            headers=self._headers(),
+            timeout=30,
+        )
+        response.raise_for_status()
+        models = response.json().get("results", [])
+
+        result: list[ConstructorLanguageModelInfo] = []
+        for model in models:
+            model_id = str(model.get("id") or "")
+            alias = str(model.get("alias") or "")
+            name = str(model.get("name") or alias or model_id)
+
+            if not alias:
+                continue
+
+            result.append(
+                ConstructorLanguageModelInfo(
+                    id=model_id,
+                    alias=alias,
+                    name=name,
+                    raw=model,
+                )
+            )
+
+        return result
+
+    def list_endpoint_candidates(
+            self,
+            include_direct: bool = True,
+            include_model: bool = True,
+    ) -> list[ConstructorEndpointCandidate]:
+        modes: list[str] = []
+
+        if include_direct:
+            modes.append("direct")
+
+        if include_model:
+            modes.append("model")
+
+        candidates: list[ConstructorEndpointCandidate] = []
+
+        for model in self.list_language_models():
+            safe_alias = self._safe_identifier(model.alias)
+
+            for mode in modes:
+                endpoint_id = f"{mode}_{safe_alias}"
+                snippet = self._endpoint_xml_snippet(endpoint_id, model.alias, mode)
+
+                candidates.append(
+                    ConstructorEndpointCandidate(
+                        endpoint_id=endpoint_id,
+                        llm_alias=model.alias,
+                        llm_name=model.name,
+                        llm_id=model.id,
+                        mode=mode,
+                        xml_snippet=snippet,
+                    )
+                )
+
+        return candidates
+
+    def _headers(self) -> dict[str, str]:
+        return {"X-KM-AccessKey": f"Bearer {self.config.resolved_api_key()}"}
+
+    @staticmethod
+    def _safe_identifier(value: str) -> str:
+        chars = []
+
+        for char in value.lower():
+            if char.isalnum():
+                chars.append(char)
+            else:
+                chars.append("_")
+
+        compact = "_".join(part for part in "".join(chars).split("_") if part)
+        return compact or "unknown"
+
+    @staticmethod
+    def _endpoint_xml_snippet(endpoint_id: str, llm_alias: str, mode: str) -> str:
+        return (
+            f'<endpoint id="{endpoint_id}" llm_alias="{llm_alias}" mode="{mode}" '
+            f'role="review_and_improve" timeout="300" request_timeout="15" retry_delay="3">\n'
+            f'    <description>Endpoint using {llm_alias} in {mode} mode.</description>\n'
+            f'</endpoint>'
+        )
+
+@dataclass(frozen=True)
+class ConstructorLanguageModelInfo:
+    id: str
+    alias: str
+    name: str
+    raw: dict[str, Any]
+
+
+@dataclass(frozen=True)
+class ConstructorEndpointCandidate:
+    endpoint_id: str
+    llm_alias: str
+    llm_name: str
+    llm_id: str
+    mode: str
+    xml_snippet: str

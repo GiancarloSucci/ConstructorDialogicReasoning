@@ -4,10 +4,14 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from constructor_agent.config_loader import XmlPathConfigLoader
-from constructor_agent.constructor_stateful_client import ConstructorPlatformConfig, StatefulConstructorClient
 from constructor_agent.domain import AgentPathConfig, AgentState
 from constructor_agent.graph_builder import AgentGraphBuilder
 
+from constructor_agent.constructor_stateful_client import (
+    ConstructorEndpointCandidate,
+    ConstructorPlatformConfig,
+    StatefulConstructorClient,
+)
 
 @dataclass(frozen=True)
 class AgentRunResult:
@@ -52,4 +56,17 @@ class ConstructorAgentRunner:
             final_answer=state.get("final_answer") or "",
             explanation=state.get("explanation") or "",
             state=state,
+        )
+
+    @staticmethod
+    def list_constructor_endpoints(
+            platform_config: ConstructorPlatformConfig | None = None,
+            include_direct: bool = True,
+            include_model: bool = True,
+    ) -> list[ConstructorEndpointCandidate]:
+        client = StatefulConstructorClient(platform_config)
+
+        return client.list_endpoint_candidates(
+            include_direct=include_direct,
+            include_model=include_model,
         )
