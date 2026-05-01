@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agentPath name="constructor-stateful-review-chain">
+    <endpoint
+        id="first"
+        llm_alias="gemini-3-flash-preview"
+        mode="direct"
+        role="initial_answer"
+        timeout="300"
+        request_timeout="15"
+        retry_delay="3">
+        <description>Produce the first operational answer.</description>
+    </endpoint>
+
+    <endpoint
+        id="critic"
+        llm_alias="gemini-3-flash-preview"
+        mode="direct"
+        role="review_and_improve"
+        timeout="300"
+        request_timeout="15"
+        retry_delay="3">
+        <description>Check the previous answer and improve correctness and completeness.</description>
+    </endpoint>
+
+    <endpoint
+        id="finalizer"
+        llm_alias="gemini-3-flash-preview"
+        mode="direct"
+        role="final_synthesis"
+        timeout="300"
+        request_timeout="15"
+        retry_delay="3">
+        <description>Produce the final answer for the user.</description>
+    </endpoint>
+</agentPath>
