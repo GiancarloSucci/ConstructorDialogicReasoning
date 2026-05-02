@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
-from constructor_agent.statefull_constructor_client import ConstructorPlatformConfig
+from constructor_agent.stateful_constructor_client import ConstructorPlatformConfig
 from constructor_agent.stateless_constructor_adapter_dialogic import (
     StatelessConstructorAdapterDialogic,
 )

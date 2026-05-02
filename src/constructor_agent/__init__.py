@@ -1,5 +1,5 @@
 from constructor_agent.runner import AgentRunResult, ConstructorAgentRunner
-from constructor_agent.statefull_constructor_client import (
+from constructor_agent.stateful_constructor_client import (
     ConstructorPlatformConfig,
     StatefulConstructorClient,
 )
