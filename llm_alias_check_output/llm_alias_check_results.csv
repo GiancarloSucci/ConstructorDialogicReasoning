@@ -1,0 +1,6 @@
+endpoint_id,llm_alias,mode,usable,elapsed_seconds,answer_preview,error_type,error_message
+direct_o4_mini,o4-mini,direct,False,62.777,,TimeoutError,"Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=8a30434ba444486692bc867b504be5f7, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=af42ddc015414f78806ed80cd32562eb, type=user_message, status={}, content_keys=[], text_preview=''"
+direct_gpt_4o_mini,gpt-4o-mini,direct,True,8.234,OK,,
+direct_gpt_4,gpt-4,direct,False,61.64,,TimeoutError,"Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=9a60189c368941509f9de3e2dc5b169d, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=707a9121ec0440919d98778294bbefd3, type=user_message, status={}, content_keys=[], text_preview=''"
+direct_gpt_4_1_nano,gpt-4.1-nano,direct,True,5.316,OK,,
+direct_gpt_4_1,gpt-4.1,direct,True,4.639,OK,,

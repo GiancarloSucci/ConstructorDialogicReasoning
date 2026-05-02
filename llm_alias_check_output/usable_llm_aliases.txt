@@ -1,0 +1,3 @@
+direct	gpt-4o-mini	direct_gpt_4o_mini
+direct	gpt-4.1-nano	direct_gpt_4_1_nano
+direct	gpt-4.1	direct_gpt_4_1

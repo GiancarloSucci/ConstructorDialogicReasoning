@@ -1,0 +1,52 @@
+[
+  {
+    "endpoint_id": "direct_o4_mini",
+    "llm_alias": "o4-mini",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 62.777,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=8a30434ba444486692bc867b504be5f7, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=af42ddc015414f78806ed80cd32562eb, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_4o_mini",
+    "llm_alias": "gpt-4o-mini",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.234,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_4",
+    "llm_alias": "gpt-4",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 61.64,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=9a60189c368941509f9de3e2dc5b169d, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=707a9121ec0440919d98778294bbefd3, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_4_1_nano",
+    "llm_alias": "gpt-4.1-nano",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 5.316,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_4_1",
+    "llm_alias": "gpt-4.1",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 4.639,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  }
+]

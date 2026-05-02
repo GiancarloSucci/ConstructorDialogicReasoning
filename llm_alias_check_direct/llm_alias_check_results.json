@@ -1,0 +1,1142 @@
+[
+  {
+    "endpoint_id": "direct_o4_mini",
+    "llm_alias": "o4-mini",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 94.152,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=1024a76bc41d4b7dba20a2daeb737c24, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=2c76dbcff1a944e0a04e0ecbb2b785e7, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_4o_mini",
+    "llm_alias": "gpt-4o-mini",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.582,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_4",
+    "llm_alias": "gpt-4",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 94.36,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=637da4ba115b4c1485d49e7ae3bdc56a, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=2ae9f79b14f74f18b1448c6fd94bd8f8, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_4_1_nano",
+    "llm_alias": "gpt-4.1-nano",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 5.273,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_4_1",
+    "llm_alias": "gpt-4.1",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 4.879,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_o1_2024_12_17",
+    "llm_alias": "o1-2024-12-17",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.554,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=2a11097953bf4664a027d9076b1508ab, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=26c313a884484392b40daa8e3a9e5403, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_o3",
+    "llm_alias": "o3",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.587,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=98689b5513da4d95a4018e183cba7920, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=973d736b4c394755a0ad4a933b219166, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_claude_opus_4_0",
+    "llm_alias": "claude-opus-4-0",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.759,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_4_1_mini",
+    "llm_alias": "gpt-4.1-mini",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 5.043,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_2_5_flash",
+    "llm_alias": "gemini-2.5-flash",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.155,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_2_0_flash_001",
+    "llm_alias": "gemini-2.0-flash-001",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 14.084,
+    "answer_preview": "OK ",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_4o_2024_08_06",
+    "llm_alias": "gpt-4o-2024-08-06",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.952,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_claude_sonnet_4_0",
+    "llm_alias": "claude-sonnet-4-0",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.829,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_2_5_pro",
+    "llm_alias": "gemini-2.5-pro",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.729,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_o3_mini",
+    "llm_alias": "o3-mini",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.343,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=74882b0ce22a4c16bbf9f9df697ebfc8, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=1f4f6d80be0b471ab3086339683a97cd, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_low_reasoning",
+    "llm_alias": "gpt-5-low-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.052,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_4_turbo",
+    "llm_alias": "gpt-4-turbo",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.862,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_high_reasoning",
+    "llm_alias": "gpt-5-high-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.2,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_claude_opus_4_1_thinking",
+    "llm_alias": "claude-opus-4-1-thinking",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.894,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=3f1c2acab3e142d9b4057b1ddc5270de, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=fee2c3445526409189386d737e3741bf, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_3_5_turbo",
+    "llm_alias": "gpt-3.5-turbo",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.089,
+    "answer_preview": "OK.",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_zai_org_glm_4_5_air_fp8",
+    "llm_alias": "together/zai-org/glm-4.5-air-fp8",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.403,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=6f5c6f1717a14a96a66da16f5e90065c, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=5f2a917978f34df0bf939de69a30efb5, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_nano",
+    "llm_alias": "gpt-5-nano",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.315,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_sonar_pro",
+    "llm_alias": "sonar-pro",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.973,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_claude_sonnet_4_5",
+    "llm_alias": "claude-sonnet-4-5",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.903,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_llama3_2_vision_11b_instruct_q4_k_m",
+    "llm_alias": "llama3.2-vision:11b-instruct-q4_K_M",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.694,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"llama3.2-vision:11b-instruct-q4_K_M\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_sonar",
+    "llm_alias": "sonar",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.996,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_grok_4",
+    "llm_alias": "grok-4",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.059,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_pro",
+    "llm_alias": "gpt-5-pro",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.381,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=a8adb0d8b0a4445c95e36edb2efdda23, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=b6416f0b538d4ae3b1749a4240425bb3, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_grok_4_fast_non_reasoning",
+    "llm_alias": "grok-4-fast-non-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 4.718,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_llama3_1_8b_instruct_q4_k_m",
+    "llm_alias": "llama3.1:8b-instruct-q4_K_M",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.404,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=4b944f012dc64b2faaf571d39fbcd637, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=069e292ca03e4b5481b33ac21bf0d43b, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_claude_haiku_4_5",
+    "llm_alias": "claude-haiku-4-5",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 4.787,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5",
+    "llm_alias": "gpt-5",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.728,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_claude_opus_4_1",
+    "llm_alias": "claude-opus-4-1",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.789,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_grok_4_1_fast_reasoning",
+    "llm_alias": "grok-4-1-fast-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.943,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_meta_llama_meta_llama_3_8b_instruct_lite",
+    "llm_alias": "together/meta-llama/meta-llama-3-8b-instruct-lite",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.642,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/meta-llama/meta-llama-3-8b-instruct-lite\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_1_codex_mini",
+    "llm_alias": "gpt-5.1-codex-mini",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.075,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=f44715441fca4de88b59d8490826ad93, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=b18dddc210ea4bab90687b3300aad444, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_together_meta_llama_llama_4_maverick_17b_128e_instruct_fp8",
+    "llm_alias": "together/meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.755,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/meta-llama/llama-4-maverick-17b-128e-instruct-fp8\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_grok_4_fast_reasoning",
+    "llm_alias": "grok-4-fast-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.06,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_2_0_flash",
+    "llm_alias": "gemini-2.0-flash",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.092,
+    "answer_preview": "OK ",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_1",
+    "llm_alias": "gpt-5.1",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.835,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_minimal_reasoning",
+    "llm_alias": "gpt-5-minimal-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.863,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_meta_llama_llama_3_3_70b_instruct_turbo",
+    "llm_alias": "together/meta-llama/llama-3.3-70b-instruct-turbo",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.672,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/meta-llama/llama-3.3-70b-instruct-turbo\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_1_codex",
+    "llm_alias": "gpt-5.1-codex",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.779,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=2df5f1fc55624e2b90b97d6e04255060, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=77ae94cc94a64257a93c65a02db5b4be, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_llama3_2_3b",
+    "llm_alias": "llama3.2:3b",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.419,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=8200fa99e8c84435a16b1503ff1a071d, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=b5431821bd74463089972f2c84615222, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_together_moonshotai_kimi_k2_instruct",
+    "llm_alias": "together/moonshotai/kimi-k2-instruct",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 2.908,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/moonshotai/kimi-k2-instruct\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_o3_pro",
+    "llm_alias": "o3-pro",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.198,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=94c56c9a39b8488d9230f87587ad206c, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=5f1a77883bbe4314b9a6b9c346b25b93, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_together_qwen_qwen3_coder_480b_a35b_instruct_fp8",
+    "llm_alias": "together/qwen/qwen3-coder-480b-a35b-instruct-fp8",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.823,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/qwen/qwen3-coder-480b-a35b-instruct-fp8\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_together_qwen_qwen2_5_7b_instruct_turbo",
+    "llm_alias": "together/qwen/qwen2.5-7b-instruct-turbo",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.61,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/qwen/qwen2.5-7b-instruct-turbo\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_claude_opus_4_5",
+    "llm_alias": "claude-opus-4-5",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.843,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_1_chat_latest",
+    "llm_alias": "gpt-5.1-chat-latest",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.498,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=b91609502dd24fc586c181f5cf5e0762, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=47babdf697f04d6c967913d23f60ad01, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_together_meta_llama_meta_llama_3_1_8b_instruct_turbo",
+    "llm_alias": "together/meta-llama/meta-llama-3.1-8b-instruct-turbo",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.794,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/meta-llama/meta-llama-3.1-8b-instruct-turbo\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_gpt_4o_2024_11_20",
+    "llm_alias": "gpt-4o-2024-11-20",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 4.804,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_deepseek_ai_deepseek_v3_1",
+    "llm_alias": "together/deepseek-ai/deepseek-v3.1",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.723,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/deepseek-ai/deepseek-v3.1\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_gemini_2_5_flash_lite",
+    "llm_alias": "gemini-2.5-flash-lite",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.033,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_google_gemma_3n_e4b_it",
+    "llm_alias": "together/google/gemma-3n-e4b-it",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.437,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=f57c28f4ff0345208eae0f7991a28d75, type=ai_message, status={'name': 'done', 'message': 'generated'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=d01c945488034fa496b58cc1d4456cb4, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_grok_4_1_fast_non_reasoning",
+    "llm_alias": "grok-4-1-fast-non-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 5.269,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_mini",
+    "llm_alias": "gpt-5-mini",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.997,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_claude_opus_4_6",
+    "llm_alias": "claude-opus-4-6",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.764,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_google_gemma_3_27b_it",
+    "llm_alias": "google/gemma-3-27b-it",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 94.184,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=86a6fccff2024a6081ffbf638b4ae801, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=62140eea0d2c4b5b8011fc1121a55f73, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_chat_latest",
+    "llm_alias": "gpt-5-chat-latest",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.102,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_codex",
+    "llm_alias": "gpt-5-codex",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 93.599,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=bead171fa6fd4400818eda6696314234, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=8c25d836b28c4454932a75e629a9202a, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_1_codex_max",
+    "llm_alias": "gpt-5.1-codex-max",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 112.298,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=89588e36086347a69411bad4fcf951fa, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=e73b2a96b38447f6ae1b06c62a5c2914, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2",
+    "llm_alias": "gpt-5.2",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.246,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2_chat_latest_high_reasoning",
+    "llm_alias": "gpt-5.2-chat-latest-high-reasoning",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.672,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"gpt-5.2-chat-latest-high-reasoning\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2_chat_latest_low_reasoning",
+    "llm_alias": "gpt-5.2-chat-latest-low-reasoning",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.816,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"gpt-5.2-chat-latest-low-reasoning\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2_chat_latest_medium_reasoning",
+    "llm_alias": "gpt-5.2-chat-latest-medium-reasoning",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 1.602,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"gpt-5.2-chat-latest-medium-reasoning\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2_codex",
+    "llm_alias": "gpt-5.2-codex",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 933.619,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=93945e2056aa4aacb4e57b3828ee02b4, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=57dc2f3b8b68493bae93f1de48e9287b, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2_pro",
+    "llm_alias": "gpt-5.2-pro",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 94.627,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=f5a4732d4f184b30aa3f25a7d72ee0ed, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=5e8d6e0472ec4aafbc4f4199043a67d7, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_grok_3",
+    "llm_alias": "grok-3",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 907.137,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_grok_3_mini",
+    "llm_alias": "grok-3-mini",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.686,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_grok_4_0709",
+    "llm_alias": "grok-4-0709",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.07,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_grok_4_20_beta_0309_non_reasoning",
+    "llm_alias": "grok-4.20-beta-0309-non-reasoning",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.842,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"grok-4.20-beta-0309-non-reasoning\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_grok_4_20_beta_0309_reasoning",
+    "llm_alias": "grok-4.20-beta-0309-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.815,
+    "answer_preview": "OK   The user's explicit final instruction was to \"Answer exactly with the single word OK.\" All preceding context (RadonPy, MAPIE, ACCRa project, error classification preferences, LaTeX CV pagination, mobile CSS fixes, Acronis competencies, etc.) was therefore disregarded in favor of literal complia",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_grok_4_20_multi_agent_beta_0309",
+    "llm_alias": "grok-4.20-multi-agent-beta-0309",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 92.055,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=e04d67827d6045c08250f6f5fecab2da, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=8d4d55e29f4740a2931a3addd9cabe6d, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_nvidia_nvidia_nemotron_3_nano_30b_a3b_bf16",
+    "llm_alias": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 1.038,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_qwen_qwen3_5_9b",
+    "llm_alias": "Qwen/Qwen3.5-9B",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.214,
+    "answer_preview": "  OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_3_1_pro_preview",
+    "llm_alias": "gemini-3.1-pro-preview",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 14.935,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_3_flash_preview",
+    "llm_alias": "gemini-3-flash-preview",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.208,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_3_1_flash_lite_preview",
+    "llm_alias": "gemini-3.1-flash-lite-preview",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 4.822,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_google_gemma_4_31b_it",
+    "llm_alias": "together/google/gemma-4-31b-it",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 47.239,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_zai_org_glm_5_1",
+    "llm_alias": "together/zai-org/glm-5.1",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.071,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_qwen_qwen3_coder_next_fp8",
+    "llm_alias": "together/qwen/qwen3-coder-next-fp8",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.773,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/qwen/qwen3-coder-next-fp8\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_together_qwen_qwen3_235b_a22b_instruct_2507_tput",
+    "llm_alias": "together/qwen/qwen3-235b-a22b-instruct-2507-tput",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 0.915,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/qwen/qwen3-235b-a22b-instruct-2507-tput\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_together_deepseek_ai_deepseek_r1",
+    "llm_alias": "together/deepseek-ai/deepseek-r1",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.981,
+    "answer_preview": " OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_moonshotai_kimi_k2_5",
+    "llm_alias": "together/moonshotai/kimi-k2.5",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 21.092,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_moonshotai_kimi_k2_6",
+    "llm_alias": "together/moonshotai/kimi-k2.6",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.356,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_minimaxai_minimax_m2_5",
+    "llm_alias": "together/minimaxai/minimax-m2.5",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 91.956,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=4afd013edc2b4243a66169341147c9c8, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=fc6ee63a75634cbb8d5003f372f5cd17, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_together_minimaxai_minimax_m2_7",
+    "llm_alias": "together/minimaxai/minimax-m2.7",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.7,
+    "answer_preview": "  OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_essentialai_rnj_1_instruct",
+    "llm_alias": "together/essentialai/rnj-1-instruct",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 1.194,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/essentialai/rnj-1-instruct\",\"ctx\":{\"max_length\":32}}]}"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_4",
+    "llm_alias": "gpt-5.4",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.475,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_4_low_reasoning",
+    "llm_alias": "gpt-5.4-low-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.359,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_4_high_reasoning",
+    "llm_alias": "gpt-5.4-high-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 5.372,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_4_xhigh_reasoning",
+    "llm_alias": "gpt-5.4-xhigh-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.152,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_5",
+    "llm_alias": "gpt-5.5",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 6.284,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_5_low_reasoning",
+    "llm_alias": "gpt-5.5-low-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 9.161,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_5_high_reasoning",
+    "llm_alias": "gpt-5.5-high-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.774,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_5_xhigh_reasoning",
+    "llm_alias": "gpt-5.5-xhigh-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 9.141,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_5_pro",
+    "llm_alias": "gpt-5.5-pro",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 11.595,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_4_mini",
+    "llm_alias": "gpt-5.4-mini",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.208,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_4_nano",
+    "llm_alias": "gpt-5.4-nano",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 5.008,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_4_pro",
+    "llm_alias": "gpt-5.4-pro",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 92.856,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=30a383faf7154887890f366a608e15ff, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=f4458642ff2e4358a503b9139d2b2f98, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_3_codex",
+    "llm_alias": "gpt-5.3-codex",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 112.723,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=64f36581f4bc426291dc567ecaebb443, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=4f88ec29576649fda2e573b1609740aa, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2_low_reasoning",
+    "llm_alias": "gpt-5.2-low-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.534,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2_high_reasoning",
+    "llm_alias": "gpt-5.2-high-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 5.078,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gpt_5_2_xhigh_reasoning",
+    "llm_alias": "gpt-5.2-xhigh-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.954,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_qwen_qwen3_5_397b_a17b",
+    "llm_alias": "together/qwen/qwen3.5-397b-a17b",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.161,
+    "answer_preview": "  OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_zai_org_glm_5",
+    "llm_alias": "together/zai-org/glm-5",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 217.614,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_flash_latest",
+    "llm_alias": "gemini-flash-latest",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 38.175,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_gemini_pro_latest",
+    "llm_alias": "gemini-pro-latest",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 15.131,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_claude_opus_4_7",
+    "llm_alias": "claude-opus-4-7",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 92.559,
+    "answer_preview": "",
+    "error_type": "TimeoutError",
+    "error_message": "Model response timed out while waiting for a new done ai_message. Last messages received from ConstructorPlatform: Message 1: id=cceb729955b6476f891f99338166408b, type=ai_message, status={'name': 'aborted', 'message': 'starting'}, content_keys=['type', 'text', 'references', 'documents', 'links'], text_preview='' Message 2: id=d8b68a438c3c4a99afabb286a416ca7f, type=user_message, status={}, content_keys=[], text_preview=''"
+  },
+  {
+    "endpoint_id": "direct_claude_sonnet_4_6",
+    "llm_alias": "claude-sonnet-4-6",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 8.197,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_grok_4_20_reasoning",
+    "llm_alias": "grok-4.20-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 7.8,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_grok_4_20_non_reasoning",
+    "llm_alias": "grok-4.20-non-reasoning",
+    "mode": "direct",
+    "usable": true,
+    "elapsed_seconds": 4.891,
+    "answer_preview": "OK",
+    "error_type": "",
+    "error_message": ""
+  },
+  {
+    "endpoint_id": "direct_together_deepseek_ai_deepseek_v4_pro",
+    "llm_alias": "together/deepseek-ai/deepseek-v4-pro",
+    "mode": "direct",
+    "usable": false,
+    "elapsed_seconds": 1.429,
+    "answer_preview": "",
+    "error_type": "Exception",
+    "error_message": "Failed to start session: 422, {\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"llm_id\"],\"msg\":\"String should have at most 32 characters\",\"input\":\"together/deepseek-ai/deepseek-v4-pro\",\"ctx\":{\"max_length\":32}}]}"
+  }
+]

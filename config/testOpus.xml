@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questionPath name="test-claude-opus-4-7">
+    <question
+        id="test"
+        llm_alias="claude-opus-4-7"
+        mode="direct"
+        role="test"
+        timeout="120"
+        request_timeout="20"
+        retry_delay="3">
+        <description>Test model availability.</description>
+        <prompt>
+Answer exactly: OK
+        </prompt>
+    </question>
+</questionPath>
