@@ -7,7 +7,7 @@ from constructor_agent.config_loader import XmlQuestionConfigLoader
 from constructor_agent.domain import AgentState, QuestionPathConfig
 from constructor_agent.graph_builder import AgentGraphBuilder
 
-from constructor_agent.constructor_stateful_client import (
+from constructor_agent.statefull_constructor_client import (
     ConstructorPlatformConfig,
     ConstructorQuestionCandidate,
     StatefulConstructorClient,

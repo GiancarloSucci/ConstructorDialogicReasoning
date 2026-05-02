@@ -5,7 +5,7 @@ from collections.abc import Callable
 from langchain_core.messages import HumanMessage
 from langgraph.graph import END, StateGraph
 
-from constructor_agent.constructor_stateful_client import StatefulConstructorClient
+from constructor_agent.statefull_constructor_client import StatefulConstructorClient
 from constructor_agent.domain import AgentState, QuestionExchange, QuestionPathConfig, QuestionSpec
 from constructor_agent.langchain_constructor_model import ConstructorStatefulChatModel
 from constructor_agent.prompts import PromptFactory

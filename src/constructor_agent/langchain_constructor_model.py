@@ -8,7 +8,7 @@ from langchain_core.messages import AIMessage, BaseMessage
 from langchain_core.outputs import ChatGeneration, ChatResult
 from pydantic import ConfigDict, Field
 
-from constructor_agent.constructor_stateful_client import StatefulConstructorClient
+from constructor_agent.statefull_constructor_client import StatefulConstructorClient
 from constructor_agent.domain import QuestionSpec
 
 

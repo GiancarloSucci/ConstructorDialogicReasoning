@@ -1,10 +1,10 @@
 from constructor_agent.runner import AgentRunResult, ConstructorAgentRunner
-from constructor_agent.constructor_stateful_client import (
+from constructor_agent.statefull_constructor_client import (
     ConstructorPlatformConfig,
     StatefulConstructorClient,
 )
-from constructor_agent.constructor_stateless_client import (
-    ConstructorStatelessClient,
+from constructor_agent.stateless_constructor_client import (
+    StatelessConstructorClient,
     StatelessClientRunResult,
 )
 from constructor_agent.stateless_constructor_adapter_dialogic import (
@@ -16,7 +16,7 @@ __all__ = [
     "AgentRunResult",
     "ConstructorPlatformConfig",
     "StatefulConstructorClient",
-    "ConstructorStatelessClient",
+    "StatelessConstructorClient",
     "StatelessClientRunResult",
     "StatelessConstructorAdapterDialogic",
 ]
