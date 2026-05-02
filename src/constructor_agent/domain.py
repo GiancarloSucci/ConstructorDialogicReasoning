@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Annotated, Literal, Optional, TypedDict
 import operator
 
@@ -8,40 +8,45 @@ Mode = Literal["direct", "model"]
 
 
 @dataclass(frozen=True)
-class EndpointSpec:
-    """One step in the XML-defined agent path."""
+class QuestionSpec:
+    """One question step in the XML-defined question path."""
 
     id: str
     llm_alias: str
     role: str
     mode: Mode = "direct"
     description: str = ""
+    prompt: Optional[str] = None
     timeout: int = 300
     request_timeout: int = 15
     retry_delay: int = 3
 
 
 @dataclass(frozen=True)
-class AgentPathConfig:
-    """Complete XML-defined route."""
+class QuestionPathConfig:
+    """Complete XML-defined question path."""
 
     name: str
-    endpoints: tuple[EndpointSpec, ...]
+    questions: tuple[QuestionSpec, ...]
 
     def validate(self) -> None:
-        if not self.endpoints:
-            raise ValueError("The path configuration must contain at least one endpoint.")
-        ids = [endpoint.id for endpoint in self.endpoints]
-        duplicated = sorted({endpoint_id for endpoint_id in ids if ids.count(endpoint_id) > 1})
+        if not self.questions:
+            raise ValueError(
+                "The question path configuration must contain at least one question."
+            )
+
+        ids = [question.id for question in self.questions]
+        duplicated = sorted({question_id for question_id in ids if ids.count(question_id) > 1})
+
         if duplicated:
-            raise ValueError(f"Duplicated endpoint ids in XML configuration: {duplicated}")
+            raise ValueError(f"Duplicated question ids in XML configuration: {duplicated}")
 
 
 @dataclass(frozen=True)
-class EndpointExchange:
-    """Audit record for one endpoint invocation."""
+class QuestionExchange:
+    """Audit record for one question invocation."""
 
-    endpoint_id: str
+    question_id: str
     llm_alias: str
     role: str
     mode: str
@@ -56,9 +61,9 @@ class AgentState(TypedDict, total=False):
     The Annotated list tells LangGraph to append exchanges produced by nodes.
     """
 
-    original_query: str
+    original_prompt: str
     current_answer: Optional[str]
-    current_endpoint_id: Optional[str]
-    exchanges: Annotated[list[EndpointExchange], operator.add]
+    current_question_id: Optional[str]
+    exchanges: Annotated[list[QuestionExchange], operator.add]
     final_answer: Optional[str]
     explanation: Optional[str]

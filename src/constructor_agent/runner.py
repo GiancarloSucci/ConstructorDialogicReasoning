@@ -3,15 +3,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from constructor_agent.config_loader import XmlPathConfigLoader
-from constructor_agent.domain import AgentPathConfig, AgentState
+from constructor_agent.config_loader import XmlQuestionConfigLoader
+from constructor_agent.domain import AgentState, QuestionPathConfig
 from constructor_agent.graph_builder import AgentGraphBuilder
 
 from constructor_agent.constructor_stateful_client import (
-    ConstructorEndpointCandidate,
     ConstructorPlatformConfig,
+    ConstructorQuestionCandidate,
     StatefulConstructorClient,
 )
+
 
 @dataclass(frozen=True)
 class AgentRunResult:
@@ -25,12 +26,12 @@ class ConstructorAgentRunner:
 
     def __init__(
         self,
-        path_config: AgentPathConfig,
+        question_config: QuestionPathConfig,
         platform_config: ConstructorPlatformConfig | None = None,
     ) -> None:
-        self.path_config = path_config
+        self.question_config = question_config
         self.client = StatefulConstructorClient(platform_config)
-        self.graph = AgentGraphBuilder(self.client).build(path_config)
+        self.graph = AgentGraphBuilder(self.client).build(question_config)
 
     @classmethod
     def from_xml(
@@ -38,20 +39,22 @@ class ConstructorAgentRunner:
         xml_path: str | Path,
         platform_config: ConstructorPlatformConfig | None = None,
     ) -> "ConstructorAgentRunner":
-        config = XmlPathConfigLoader().load(xml_path)
+        config = XmlQuestionConfigLoader().load(xml_path)
         return cls(config, platform_config)
 
-    def run(self, query: str) -> AgentRunResult:
-        if not query.strip():
-            raise ValueError("The query is empty.")
+    def run(self, prompt: str) -> AgentRunResult:
+        if not prompt.strip():
+            raise ValueError("The prompt is empty.")
 
         initial_state: AgentState = {
-            "original_query": query.strip(),
+            "original_prompt": prompt.strip(),
             "current_answer": None,
-            "current_endpoint_id": None,
+            "current_question_id": None,
             "exchanges": [],
         }
+
         state = self.graph.invoke(initial_state)
+
         return AgentRunResult(
             final_answer=state.get("final_answer") or "",
             explanation=state.get("explanation") or "",
@@ -59,14 +62,14 @@ class ConstructorAgentRunner:
         )
 
     @staticmethod
-    def list_constructor_endpoints(
-            platform_config: ConstructorPlatformConfig | None = None,
-            include_direct: bool = True,
-            include_model: bool = True,
-    ) -> list[ConstructorEndpointCandidate]:
+    def list_constructor_questions(
+        platform_config: ConstructorPlatformConfig | None = None,
+        include_direct: bool = True,
+        include_model: bool = True,
+    ) -> list[ConstructorQuestionCandidate]:
         client = StatefulConstructorClient(platform_config)
 
-        return client.list_endpoint_candidates(
+        return client.list_question_candidates(
             include_direct=include_direct,
             include_model=include_model,
         )

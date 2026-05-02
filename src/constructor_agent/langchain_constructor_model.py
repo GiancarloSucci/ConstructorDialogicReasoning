@@ -9,16 +9,16 @@ from langchain_core.outputs import ChatGeneration, ChatResult
 from pydantic import ConfigDict, Field
 
 from constructor_agent.constructor_stateful_client import StatefulConstructorClient
-from constructor_agent.domain import EndpointSpec
+from constructor_agent.domain import QuestionSpec
 
 
 class ConstructorStatefulChatModel(BaseChatModel):
-    """LangChain chat model backed by StatefulConstructorAdapter.query()."""
+    """LangChain chat model backed by StatefulConstructorAdapter."""
 
     model_config = ConfigDict(arbitrary_types_allowed=True)
 
     client: StatefulConstructorClient = Field(exclude=True)
-    endpoint: EndpointSpec
+    question: QuestionSpec
 
     @property
     def _llm_type(self) -> str:
@@ -27,9 +27,9 @@ class ConstructorStatefulChatModel(BaseChatModel):
     @property
     def _identifying_params(self) -> dict[str, Any]:
         return {
-            "endpoint_id": self.endpoint.id,
-            "llm_alias": self.endpoint.llm_alias,
-            "mode": self.endpoint.mode,
+            "question_id": self.question.id,
+            "llm_alias": self.question.llm_alias,
+            "mode": self.question.mode,
         }
 
     def _generate(
@@ -40,14 +40,23 @@ class ConstructorStatefulChatModel(BaseChatModel):
         **kwargs: Any,
     ) -> ChatResult:
         prompt = self._messages_to_constructor_prompt(messages)
-        answer = self.client.ask(self.endpoint, prompt)
-        return ChatResult(generations=[ChatGeneration(message=AIMessage(content=answer))])
+        answer = self.client.ask(self.question, prompt)
+
+        return ChatResult(
+            generations=[
+                ChatGeneration(
+                    message=AIMessage(content=answer),
+                )
+            ]
+        )
 
     @staticmethod
     def _messages_to_constructor_prompt(messages: list[BaseMessage]) -> str:
         parts: list[str] = []
+
         for message in messages:
             role = message.type.upper()
             content = message.content
             parts.append(f"{role}:\n{content}")
+
         return "\n\n".join(parts)

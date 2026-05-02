@@ -1,57 +1,94 @@
 from __future__ import annotations
 
-from constructor_agent.domain import AgentState, EndpointSpec
+from constructor_agent.domain import AgentState, QuestionSpec
 
 
 class PromptFactory:
-    """Creates prompts for the endpoint chain."""
+    """Creates prompts for the question chain."""
 
-    def build_endpoint_prompt(self, endpoint: EndpointSpec, state: AgentState) -> str:
+    def build_question_prompt(self, question: QuestionSpec, state: AgentState) -> str:
         current_answer = state.get("current_answer")
+
+        if question.prompt:
+            return self._custom_prompt(question, state)
+
         if not current_answer:
-            return self._initial_prompt(endpoint, state["original_query"])
+            return self._initial_prompt(question, state["original_prompt"])
+
         return self._revision_prompt(
-            endpoint=endpoint,
-            original_query=state["original_query"],
-            previous_endpoint=state.get("current_endpoint_id") or "unknown",
+            question=question,
+            original_prompt=state["original_prompt"],
+            previous_question=state.get("current_question_id") or "unknown",
             previous_answer=current_answer,
         )
 
     @staticmethod
-    def _initial_prompt(endpoint: EndpointSpec, original_query: str) -> str:
-        return f"""You are an LLM endpoint in a sequential agentic system.
+    def _custom_prompt(question: QuestionSpec, state: AgentState) -> str:
+        original_prompt = state["original_prompt"]
+        current_answer = state.get("current_answer") or ""
 
-Endpoint id: {endpoint.id}
-Endpoint role: {endpoint.role}
-Endpoint description: {endpoint.description}
+        replacements = {
+            "prompt": original_prompt,
+            "answer": current_answer,
+            "input": current_answer if current_answer else original_prompt,
+            "original_prompt": original_prompt,
+            "previous_answer": current_answer,
+            "previous_question": state.get("current_question_id") or "unknown",
+            "question_id": question.id,
+            "question_role": question.role,
+            "question_description": question.description,
+        }
 
-Original user query:
-{original_query}
+        for exchange in state.get("exchanges", []):
+            replacements[f"{exchange.question_id}.prompt"] = exchange.prompt
+            replacements[f"{exchange.question_id}.answer"] = exchange.answer
+
+        return PromptFactory._replace_placeholders(question.prompt or "", replacements)
+
+    @staticmethod
+    def _replace_placeholders(template: str, replacements: dict[str, str]) -> str:
+        result = template
+
+        for key in sorted(replacements.keys(), key=len, reverse=True):
+            result = result.replace("{" + key + "}", replacements[key])
+
+        return result
+
+    @staticmethod
+    def _initial_prompt(question: QuestionSpec, original_prompt: str) -> str:
+        return f"""You are an LLM question step in a sequential agentic system.
+
+Question id: {question.id}
+Question role: {question.role}
+Question description: {question.description}
+
+Original user prompt:
+{original_prompt}
 
 Task:
-Produce the first answer to the original user query.
+Produce the first answer to the original user prompt.
 The answer must be precise, operational, and explicit.
 Return only the answer.
 """
 
     @staticmethod
     def _revision_prompt(
-        endpoint: EndpointSpec,
-        original_query: str,
-        previous_endpoint: str,
+        question: QuestionSpec,
+        original_prompt: str,
+        previous_question: str,
         previous_answer: str,
     ) -> str:
-        return f"""You are an LLM endpoint in a sequential agentic review system.
+        return f"""You are an LLM question step in a sequential agentic review system.
 
-Endpoint id: {endpoint.id}
-Endpoint role: {endpoint.role}
-Endpoint description: {endpoint.description}
+Question id: {question.id}
+Question role: {question.role}
+Question description: {question.description}
 
-Original user query:
-{original_query}
+Original user prompt:
+{original_prompt}
 
-Previous endpoint:
-{previous_endpoint}
+Previous question:
+{previous_question}
 
 Previous answer:
 {previous_answer}
@@ -69,23 +106,26 @@ Return only the improved answer.
     @staticmethod
     def build_final_explanation(state: AgentState) -> str:
         exchanges = state.get("exchanges", [])
+
         lines = [
             "The answer was produced by a LangGraph state machine built from the XML configuration.",
-            f"The graph executed {len(exchanges)} endpoint step(s).",
+            f"The graph executed {len(exchanges)} question step(s).",
             "",
             "Execution path:",
         ]
+
         for i, exchange in enumerate(exchanges, start=1):
             lines.append(
-                f"{i}. endpoint={exchange.endpoint_id}; "
+                f"{i}. question={exchange.question_id}; "
                 f"llm_alias={exchange.llm_alias}; "
                 f"mode={exchange.mode}; role={exchange.role}"
             )
+
         lines.append("")
         lines.append(
-            "Each step received the original query. Every step after the first also received "
-            "the answer produced by the preceding endpoint and was asked to judge whether it "
-            "was acceptable and how it should be improved. The returned answer is the last "
-            "answer generated by the configured path."
+            "Each question step received the original prompt. Every step after the first "
+            "also received the answer produced by the preceding step. The returned answer "
+            "is the last answer generated by the configured path."
         )
+
         return "\n".join(lines)

@@ -7,7 +7,7 @@ from typing import Any, Optional
 
 import requests
 
-from constructor_agent.domain import EndpointSpec
+from constructor_agent.domain import QuestionSpec
 
 
 DEFAULT_API_URL = "https://training.constructor.app/api/platform-kmapi/v1"
@@ -73,8 +73,8 @@ class ConstructorLanguageModelInfo:
 
 
 @dataclass(frozen=True)
-class ConstructorEndpointCandidate:
-    endpoint_id: str
+class ConstructorQuestionCandidate:
+    question_id: str
     llm_alias: str
     llm_name: str
     llm_id: str
@@ -87,12 +87,12 @@ class StatefulConstructorClient:
     Concrete adapter around constructor_adapter.StatefulConstructorAdapter.
 
     One StatefulConstructorAdapter instance is cached per effective
-    (llm_alias, mode), so each endpoint keeps its own Constructor chat session
+    (llm_alias, mode), so each question keeps its own Constructor chat session
     during one run.
 
     Important implementation detail:
-    ConstructorAdapter currently requires a knowledge model id even for
-    direct mode, because StatefulConstructorAdapter creates chat sessions under
+    ConstructorAdapter currently requires a knowledge model id even for direct
+    mode, because StatefulConstructorAdapter creates chat sessions under
     /knowledge-models/{km_id}/chat-sessions. Therefore, this wrapper creates
     a temporary empty knowledge model when the configured km_id is missing,
     invalid, or inaccessible.
@@ -106,15 +106,15 @@ class StatefulConstructorClient:
         self._temporary_direct_km_id: str | None = None
         self._patch_constructor_adapter_for_direct_mode()
 
-    def ask(self, endpoint: EndpointSpec, prompt: str) -> str:
-        adapter = self._get_or_create_adapter(endpoint)
+    def ask(self, question: QuestionSpec, prompt: str) -> str:
+        adapter = self._get_or_create_adapter(question)
 
         return self._query_adapter_robust(
             adapter=adapter,
             prompt=prompt,
-            timeout=endpoint.timeout,
-            request_timeout=endpoint.request_timeout,
-            retry_delay=endpoint.retry_delay,
+            timeout=question.timeout,
+            request_timeout=question.request_timeout,
+            retry_delay=question.retry_delay,
         )
 
     def restart_all_sessions(self) -> None:
@@ -153,11 +153,11 @@ class StatefulConstructorClient:
 
         return result
 
-    def list_endpoint_candidates(
+    def list_question_candidates(
         self,
         include_direct: bool = True,
         include_model: bool = True,
-    ) -> list[ConstructorEndpointCandidate]:
+    ) -> list[ConstructorQuestionCandidate]:
         modes: list[str] = []
 
         if include_direct:
@@ -166,18 +166,18 @@ class StatefulConstructorClient:
         if include_model:
             modes.append("model")
 
-        candidates: list[ConstructorEndpointCandidate] = []
+        candidates: list[ConstructorQuestionCandidate] = []
 
         for model in self.list_language_models():
             safe_alias = self._safe_identifier(model.alias)
 
             for mode in modes:
-                endpoint_id = f"{mode}_{safe_alias}"
-                snippet = self._endpoint_xml_snippet(endpoint_id, model.alias, mode)
+                question_id = f"{mode}_{safe_alias}"
+                snippet = self._question_xml_snippet(question_id, model.alias, mode)
 
                 candidates.append(
-                    ConstructorEndpointCandidate(
-                        endpoint_id=endpoint_id,
+                    ConstructorQuestionCandidate(
+                        question_id=question_id,
                         llm_alias=model.alias,
                         llm_name=model.name,
                         llm_id=model.id,
@@ -188,29 +188,29 @@ class StatefulConstructorClient:
 
         return candidates
 
-    def _get_or_create_adapter(self, endpoint: EndpointSpec) -> object:
-        effective_endpoint = self._effective_endpoint(endpoint)
-        key = (effective_endpoint.llm_alias, effective_endpoint.mode)
+    def _get_or_create_adapter(self, question: QuestionSpec) -> object:
+        effective_question = self._effective_question(question)
+        key = (effective_question.llm_alias, effective_question.mode)
 
         if key not in self._adapters:
-            self._adapters[key] = self._new_adapter(effective_endpoint)
+            self._adapters[key] = self._new_adapter(effective_question)
 
         return self._adapters[key]
 
-    def _new_adapter(self, endpoint: EndpointSpec) -> object:
+    def _new_adapter(self, question: QuestionSpec) -> object:
         from constructor_adapter import StatefulConstructorAdapter
 
-        effective_endpoint = self._effective_endpoint(endpoint)
+        effective_question = self._effective_question(question)
 
-        if effective_endpoint.mode == "direct":
-            return self._new_direct_adapter(effective_endpoint)
+        if effective_question.mode == "direct":
+            return self._new_direct_adapter(effective_question)
 
         kwargs = {
             "mode": "model",
             "api_url": self.config.resolved_api_url(),
             "api_key": self.config.resolved_api_key(),
             "km_id": self.config.resolved_km_id(optional=False),
-            "llm_alias": effective_endpoint.llm_alias,
+            "llm_alias": effective_question.llm_alias,
         }
 
         try:
@@ -220,13 +220,13 @@ class StatefulConstructorClient:
             self._enable_direct_mode(
                 "Knowledge model mode failed during adapter initialization: "
                 f"{type(exc).__name__}: {exc}. "
-                "Continuing with direct LLM mode for all endpoints."
+                "Continuing with direct LLM mode for all questions."
             )
 
-            direct_endpoint = self._endpoint_as_direct(effective_endpoint)
-            return self._new_direct_adapter(direct_endpoint)
+            direct_question = self._question_as_direct(effective_question)
+            return self._new_direct_adapter(direct_question)
 
-    def _new_direct_adapter(self, endpoint: EndpointSpec) -> object:
+    def _new_direct_adapter(self, question: QuestionSpec) -> object:
         from constructor_adapter import StatefulConstructorAdapter
 
         km_id = self._get_direct_mode_km_id()
@@ -236,7 +236,7 @@ class StatefulConstructorClient:
             api_url=self.config.resolved_api_url(),
             api_key=self.config.resolved_api_key(),
             km_id=km_id,
-            llm_alias=endpoint.llm_alias,
+            llm_alias=question.llm_alias,
         )
 
     def _query_adapter_robust(
@@ -403,33 +403,33 @@ class StatefulConstructorClient:
 
         return "\n".join(lines)
 
-    def _effective_endpoint(self, endpoint: EndpointSpec) -> EndpointSpec:
+    def _effective_question(self, question: QuestionSpec) -> QuestionSpec:
         if self._force_direct_mode:
-            return self._endpoint_as_direct(endpoint)
+            return self._question_as_direct(question)
 
-        if endpoint.mode == "model":
+        if question.mode == "model":
             configured_km_id = self.config.resolved_km_id(optional=True)
 
             if not self._is_valid_km_id(configured_km_id):
                 self._enable_direct_mode(
                     "Knowledge model id is missing, invalid, or not accessible. "
-                    "Continuing with direct LLM mode for all endpoints."
+                    "Continuing with direct LLM mode for all questions."
                 )
-                return self._endpoint_as_direct(endpoint)
+                return self._question_as_direct(question)
 
-        return endpoint
+        return question
 
-    def _endpoint_as_direct(self, endpoint: EndpointSpec) -> EndpointSpec:
-        if getattr(endpoint, "mode", None) == "direct":
-            return endpoint
+    def _question_as_direct(self, question: QuestionSpec) -> QuestionSpec:
+        if getattr(question, "mode", None) == "direct":
+            return question
 
-        if hasattr(endpoint, "model_copy"):
-            return endpoint.model_copy(update={"mode": "direct"})
+        if hasattr(question, "model_copy"):
+            return question.model_copy(update={"mode": "direct"})
 
-        if hasattr(endpoint, "copy"):
-            return endpoint.copy(update={"mode": "direct"})
+        if hasattr(question, "copy"):
+            return question.copy(update={"mode": "direct"})
 
-        return replace(endpoint, mode="direct")
+        return replace(question, mode="direct")
 
     def _get_direct_mode_km_id(self) -> str:
         configured_km_id = self.config.resolved_km_id(optional=True)
@@ -548,14 +548,17 @@ class StatefulConstructorClient:
         return compact or "unknown"
 
     @staticmethod
-    def _endpoint_xml_snippet(endpoint_id: str, llm_alias: str, mode: str) -> str:
+    def _question_xml_snippet(question_id: str, llm_alias: str, mode: str) -> str:
         return (
-            f'<endpoint id="{endpoint_id}" llm_alias="{llm_alias}" '
+            f'<question id="{question_id}" llm_alias="{llm_alias}" '
             f'mode="{mode}" role="review_and_improve" timeout="900" '
             f'request_timeout="30" retry_delay="5">\n'
-            f"    <description>Endpoint using {llm_alias} in {mode} "
+            f"    <description>Question using {llm_alias} in {mode} "
             f"mode.</description>\n"
-            f"</endpoint>"
+            f"    <prompt>\n"
+            f"{{answer}}\n"
+            f"    </prompt>\n"
+            f"</question>"
         )
 
     def _patch_constructor_adapter_for_direct_mode(self) -> None:

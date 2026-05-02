@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<agentPath name="constructor-stateful-review-chain">
-    <endpoint
+<questionPath name="custom-question-dialog">
+    <question
         id="first"
         llm_alias="gpt-4o-mini"
         mode="direct"
@@ -9,9 +9,16 @@
         request_timeout="30"
         retry_delay="5">
         <description>Produce the first answer.</description>
-    </endpoint>
+        <prompt>
+Original prompt:
+{prompt}
 
-    <endpoint
+Produce a precise technical answer.
+Return only the answer.
+        </prompt>
+    </question>
+
+    <question
         id="review"
         llm_alias="gemini-2.0-flash"
         mode="direct"
@@ -19,10 +26,26 @@
         timeout="900"
         request_timeout="30"
         retry_delay="5">
-        <description>Check the previous answer and improve correctness and completeness.</description>
-    </endpoint>
+        <description>Review and improve the first answer.</description>
+        <prompt>
+Original prompt:
+{prompt}
 
-    <endpoint
+Previous answer:
+{answer}
+
+Prompt used by first:
+{first.prompt}
+
+Answer produced by first:
+{first.answer}
+
+Check correctness and completeness.
+Return a complete improved answer.
+        </prompt>
+    </question>
+
+    <question
         id="finalizer"
         llm_alias="gpt-4o-mini"
         mode="direct"
@@ -30,6 +53,19 @@
         timeout="900"
         request_timeout="30"
         retry_delay="5">
-        <description>Produce the final answer for the user.</description>
-    </endpoint>
-</agentPath>
+        <description>Produce the final answer.</description>
+        <prompt>
+Original prompt:
+{prompt}
+
+Current answer:
+{answer}
+
+Review answer:
+{review.answer}
+
+Produce the final version.
+Return only the final answer.
+        </prompt>
+    </question>
+</questionPath>
