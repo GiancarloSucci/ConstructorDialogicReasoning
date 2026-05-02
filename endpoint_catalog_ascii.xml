@@ -1,0 +1,2511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpointCatalog>
+    <endpoint
+        id="direct_o4_mini"
+        llm_alias="o4-mini"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o4-mini with alias o4-mini in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_o4_mini"
+        llm_alias="o4-mini"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o4-mini with alias o4-mini in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_4o_mini"
+        llm_alias="gpt-4o-mini"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4o mini with alias gpt-4o-mini in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_4o_mini"
+        llm_alias="gpt-4o-mini"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4o mini with alias gpt-4o-mini in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_4"
+        llm_alias="gpt-4"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4 with alias gpt-4 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_4"
+        llm_alias="gpt-4"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4 with alias gpt-4 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_4_1_nano"
+        llm_alias="gpt-4.1-nano"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT 4.1 nano with alias gpt-4.1-nano in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_4_1_nano"
+        llm_alias="gpt-4.1-nano"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT 4.1 nano with alias gpt-4.1-nano in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_4_1"
+        llm_alias="gpt-4.1"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4.1 with alias gpt-4.1 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_4_1"
+        llm_alias="gpt-4.1"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4.1 with alias gpt-4.1 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_o1_2024_12_17"
+        llm_alias="o1-2024-12-17"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o1 with alias o1-2024-12-17 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_o1_2024_12_17"
+        llm_alias="o1-2024-12-17"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o1 with alias o1-2024-12-17 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_o3"
+        llm_alias="o3"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o3 with alias o3 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_o3"
+        llm_alias="o3"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o3 with alias o3 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_opus_4_0"
+        llm_alias="claude-opus-4-0"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4 with alias claude-opus-4-0 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_opus_4_0"
+        llm_alias="claude-opus-4-0"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4 with alias claude-opus-4-0 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_4_1_mini"
+        llm_alias="gpt-4.1-mini"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT 4.1 mini with alias gpt-4.1-mini in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_4_1_mini"
+        llm_alias="gpt-4.1-mini"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT 4.1 mini with alias gpt-4.1-mini in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_2_5_flash"
+        llm_alias="gemini-2.5-flash"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.5 Flash with alias gemini-2.5-flash in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_2_5_flash"
+        llm_alias="gemini-2.5-flash"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.5 Flash with alias gemini-2.5-flash in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_2_0_flash_001"
+        llm_alias="gemini-2.0-flash-001"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.0 Flash with alias gemini-2.0-flash-001 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_2_0_flash_001"
+        llm_alias="gemini-2.0-flash-001"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.0 Flash with alias gemini-2.0-flash-001 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_4o_2024_08_06"
+        llm_alias="gpt-4o-2024-08-06"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4o with alias gpt-4o-2024-08-06 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_4o_2024_08_06"
+        llm_alias="gpt-4o-2024-08-06"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4o with alias gpt-4o-2024-08-06 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_sonnet_4_0"
+        llm_alias="claude-sonnet-4-0"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Sonnet 4 with alias claude-sonnet-4-0 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_sonnet_4_0"
+        llm_alias="claude-sonnet-4-0"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Sonnet 4 with alias claude-sonnet-4-0 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_2_5_pro"
+        llm_alias="gemini-2.5-pro"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.5 Pro with alias gemini-2.5-pro in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_2_5_pro"
+        llm_alias="gemini-2.5-pro"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.5 Pro with alias gemini-2.5-pro in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_o3_mini"
+        llm_alias="o3-mini"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o3-mini with alias o3-mini in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_o3_mini"
+        llm_alias="o3-mini"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o3-mini with alias o3-mini in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_low_reasoning"
+        llm_alias="gpt-5-low-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 low reasoning with alias gpt-5-low-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_low_reasoning"
+        llm_alias="gpt-5-low-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 low reasoning with alias gpt-5-low-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_4_turbo"
+        llm_alias="gpt-4-turbo"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4 Turbo with alias gpt-4-turbo in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_4_turbo"
+        llm_alias="gpt-4-turbo"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4 Turbo with alias gpt-4-turbo in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_high_reasoning"
+        llm_alias="gpt-5-high-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 high reasoning with alias gpt-5-high-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_high_reasoning"
+        llm_alias="gpt-5-high-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 high reasoning with alias gpt-5-high-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_opus_4_1_thinking"
+        llm_alias="claude-opus-4-1-thinking"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.1 with reasoning with alias claude-opus-4-1-thinking in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_opus_4_1_thinking"
+        llm_alias="claude-opus-4-1-thinking"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.1 with reasoning with alias claude-opus-4-1-thinking in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_3_5_turbo"
+        llm_alias="gpt-3.5-turbo"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-3.5 Turbo with alias gpt-3.5-turbo in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_3_5_turbo"
+        llm_alias="gpt-3.5-turbo"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-3.5 Turbo with alias gpt-3.5-turbo in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_zai_org_glm_4_5_air_fp8"
+        llm_alias="together/zai-org/glm-4.5-air-fp8"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GLM 4.5 Air with alias together/zai-org/glm-4.5-air-fp8 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_zai_org_glm_4_5_air_fp8"
+        llm_alias="together/zai-org/glm-4.5-air-fp8"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GLM 4.5 Air with alias together/zai-org/glm-4.5-air-fp8 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_nano"
+        llm_alias="gpt-5-nano"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 nano with alias gpt-5-nano in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_nano"
+        llm_alias="gpt-5-nano"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 nano with alias gpt-5-nano in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_sonar_pro"
+        llm_alias="sonar-pro"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Sonar Pro with alias sonar-pro in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_sonar_pro"
+        llm_alias="sonar-pro"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Sonar Pro with alias sonar-pro in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_sonnet_4_5"
+        llm_alias="claude-sonnet-4-5"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Sonnet 4.5 with alias claude-sonnet-4-5 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_sonnet_4_5"
+        llm_alias="claude-sonnet-4-5"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Sonnet 4.5 with alias claude-sonnet-4-5 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_llama3_2_vision_11b_instruct_q4_k_m"
+        llm_alias="llama3.2-vision:11b-instruct-q4_K_M"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.2 11B with alias llama3.2-vision:11b-instruct-q4_K_M in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_llama3_2_vision_11b_instruct_q4_k_m"
+        llm_alias="llama3.2-vision:11b-instruct-q4_K_M"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.2 11B with alias llama3.2-vision:11b-instruct-q4_K_M in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_sonar"
+        llm_alias="sonar"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Sonar with alias sonar in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_sonar"
+        llm_alias="sonar"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Sonar with alias sonar in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4"
+        llm_alias="grok-4"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4 with alias grok-4 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4"
+        llm_alias="grok-4"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4 with alias grok-4 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_pro"
+        llm_alias="gpt-5-pro"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 pro with alias gpt-5-pro in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_pro"
+        llm_alias="gpt-5-pro"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 pro with alias gpt-5-pro in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_fast_non_reasoning"
+        llm_alias="grok-4-fast-non-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4 Fast Non-Reasoning with alias grok-4-fast-non-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_fast_non_reasoning"
+        llm_alias="grok-4-fast-non-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4 Fast Non-Reasoning with alias grok-4-fast-non-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_llama3_1_8b_instruct_q4_k_m"
+        llm_alias="llama3.1:8b-instruct-q4_K_M"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.1 8B with alias llama3.1:8b-instruct-q4_K_M in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_llama3_1_8b_instruct_q4_k_m"
+        llm_alias="llama3.1:8b-instruct-q4_K_M"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.1 8B with alias llama3.1:8b-instruct-q4_K_M in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_haiku_4_5"
+        llm_alias="claude-haiku-4-5"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Haiku 4.5 with alias claude-haiku-4-5 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_haiku_4_5"
+        llm_alias="claude-haiku-4-5"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Haiku 4.5 with alias claude-haiku-4-5 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5"
+        llm_alias="gpt-5"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 medium reasoning with alias gpt-5 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5"
+        llm_alias="gpt-5"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 medium reasoning with alias gpt-5 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_opus_4_1"
+        llm_alias="claude-opus-4-1"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.1 with alias claude-opus-4-1 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_opus_4_1"
+        llm_alias="claude-opus-4-1"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.1 with alias claude-opus-4-1 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_1_fast_reasoning"
+        llm_alias="grok-4-1-fast-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.1 Fast Reasoning with alias grok-4-1-fast-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_1_fast_reasoning"
+        llm_alias="grok-4-1-fast-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.1 Fast Reasoning with alias grok-4-1-fast-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_meta_llama_meta_llama_3_8b_instruct_lite"
+        llm_alias="together/meta-llama/meta-llama-3-8b-instruct-lite"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3 8B Instruct Lite with alias together/meta-llama/meta-llama-3-8b-instruct-lite in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_meta_llama_meta_llama_3_8b_instruct_lite"
+        llm_alias="together/meta-llama/meta-llama-3-8b-instruct-lite"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3 8B Instruct Lite with alias together/meta-llama/meta-llama-3-8b-instruct-lite in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_1_codex_mini"
+        llm_alias="gpt-5.1-codex-mini"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Codex Mini with alias gpt-5.1-codex-mini in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_1_codex_mini"
+        llm_alias="gpt-5.1-codex-mini"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Codex Mini with alias gpt-5.1-codex-mini in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_meta_llama_llama_4_maverick_17b_128e_instruct_fp8"
+        llm_alias="together/meta-llama/llama-4-maverick-17b-128e-instruct-fp8"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 4 Maverick Instruct (17Bx128E) with alias together/meta-llama/llama-4-maverick-17b-128e-instruct-fp8 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_meta_llama_llama_4_maverick_17b_128e_instruct_fp8"
+        llm_alias="together/meta-llama/llama-4-maverick-17b-128e-instruct-fp8"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 4 Maverick Instruct (17Bx128E) with alias together/meta-llama/llama-4-maverick-17b-128e-instruct-fp8 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_fast_reasoning"
+        llm_alias="grok-4-fast-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4 Fast Reasoning with alias grok-4-fast-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_fast_reasoning"
+        llm_alias="grok-4-fast-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4 Fast Reasoning with alias grok-4-fast-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_2_0_flash"
+        llm_alias="gemini-2.0-flash"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.0 Flash with alias gemini-2.0-flash in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_2_0_flash"
+        llm_alias="gemini-2.0-flash"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.0 Flash with alias gemini-2.0-flash in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_1"
+        llm_alias="gpt-5.1"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Reasoning with alias gpt-5.1 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_1"
+        llm_alias="gpt-5.1"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Reasoning with alias gpt-5.1 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_minimal_reasoning"
+        llm_alias="gpt-5-minimal-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 minimal reasoning with alias gpt-5-minimal-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_minimal_reasoning"
+        llm_alias="gpt-5-minimal-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 minimal reasoning with alias gpt-5-minimal-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_meta_llama_llama_3_3_70b_instruct_turbo"
+        llm_alias="together/meta-llama/llama-3.3-70b-instruct-turbo"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.3 70B Instruct Turbo with alias together/meta-llama/llama-3.3-70b-instruct-turbo in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_meta_llama_llama_3_3_70b_instruct_turbo"
+        llm_alias="together/meta-llama/llama-3.3-70b-instruct-turbo"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.3 70B Instruct Turbo with alias together/meta-llama/llama-3.3-70b-instruct-turbo in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_1_codex"
+        llm_alias="gpt-5.1-codex"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Codex with alias gpt-5.1-codex in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_1_codex"
+        llm_alias="gpt-5.1-codex"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Codex with alias gpt-5.1-codex in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_llama3_2_3b"
+        llm_alias="llama3.2:3b"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.2 3B with alias llama3.2:3b in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_llama3_2_3b"
+        llm_alias="llama3.2:3b"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.2 3B with alias llama3.2:3b in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_moonshotai_kimi_k2_instruct"
+        llm_alias="together/moonshotai/kimi-k2-instruct"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Kimi K2 Instruct with alias together/moonshotai/kimi-k2-instruct in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_moonshotai_kimi_k2_instruct"
+        llm_alias="together/moonshotai/kimi-k2-instruct"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Kimi K2 Instruct with alias together/moonshotai/kimi-k2-instruct in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_o3_pro"
+        llm_alias="o3-pro"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o3-pro with alias o3-pro in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_o3_pro"
+        llm_alias="o3-pro"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using OpenAI o3-pro with alias o3-pro in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_qwen_qwen3_coder_480b_a35b_instruct_fp8"
+        llm_alias="together/qwen/qwen3-coder-480b-a35b-instruct-fp8"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3-Coder 480B-A35B Instruct with alias together/qwen/qwen3-coder-480b-a35b-instruct-fp8 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_qwen_qwen3_coder_480b_a35b_instruct_fp8"
+        llm_alias="together/qwen/qwen3-coder-480b-a35b-instruct-fp8"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3-Coder 480B-A35B Instruct with alias together/qwen/qwen3-coder-480b-a35b-instruct-fp8 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_qwen_qwen2_5_7b_instruct_turbo"
+        llm_alias="together/qwen/qwen2.5-7b-instruct-turbo"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen 2.5 7B Instruct Turbo with alias together/qwen/qwen2.5-7b-instruct-turbo in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_qwen_qwen2_5_7b_instruct_turbo"
+        llm_alias="together/qwen/qwen2.5-7b-instruct-turbo"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen 2.5 7B Instruct Turbo with alias together/qwen/qwen2.5-7b-instruct-turbo in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_opus_4_5"
+        llm_alias="claude-opus-4-5"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.5 with alias claude-opus-4-5 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_opus_4_5"
+        llm_alias="claude-opus-4-5"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.5 with alias claude-opus-4-5 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_1_chat_latest"
+        llm_alias="gpt-5.1-chat-latest"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Instant with alias gpt-5.1-chat-latest in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_1_chat_latest"
+        llm_alias="gpt-5.1-chat-latest"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Instant with alias gpt-5.1-chat-latest in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_meta_llama_meta_llama_3_1_8b_instruct_turbo"
+        llm_alias="together/meta-llama/meta-llama-3.1-8b-instruct-turbo"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.1 8B Instruct Turbo with alias together/meta-llama/meta-llama-3.1-8b-instruct-turbo in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_meta_llama_meta_llama_3_1_8b_instruct_turbo"
+        llm_alias="together/meta-llama/meta-llama-3.1-8b-instruct-turbo"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Llama 3.1 8B Instruct Turbo with alias together/meta-llama/meta-llama-3.1-8b-instruct-turbo in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_4o_2024_11_20"
+        llm_alias="gpt-4o-2024-11-20"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4o with alias gpt-4o-2024-11-20 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_4o_2024_11_20"
+        llm_alias="gpt-4o-2024-11-20"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-4o with alias gpt-4o-2024-11-20 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_deepseek_ai_deepseek_v3_1"
+        llm_alias="together/deepseek-ai/deepseek-v3.1"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using DeepSeek V3.1 with alias together/deepseek-ai/deepseek-v3.1 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_deepseek_ai_deepseek_v3_1"
+        llm_alias="together/deepseek-ai/deepseek-v3.1"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using DeepSeek V3.1 with alias together/deepseek-ai/deepseek-v3.1 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_2_5_flash_lite"
+        llm_alias="gemini-2.5-flash-lite"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.5 Flash-Lite with alias gemini-2.5-flash-lite in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_2_5_flash_lite"
+        llm_alias="gemini-2.5-flash-lite"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 2.5 Flash-Lite with alias gemini-2.5-flash-lite in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_google_gemma_3n_e4b_it"
+        llm_alias="together/google/gemma-3n-e4b-it"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemma 3N E4B Instruct with alias together/google/gemma-3n-e4b-it in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_google_gemma_3n_e4b_it"
+        llm_alias="together/google/gemma-3n-e4b-it"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemma 3N E4B Instruct with alias together/google/gemma-3n-e4b-it in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_1_fast_non_reasoning"
+        llm_alias="grok-4-1-fast-non-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.1 Fast Non-Reasoning with alias grok-4-1-fast-non-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_1_fast_non_reasoning"
+        llm_alias="grok-4-1-fast-non-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.1 Fast Non-Reasoning with alias grok-4-1-fast-non-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_mini"
+        llm_alias="gpt-5-mini"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 mini with alias gpt-5-mini in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_mini"
+        llm_alias="gpt-5-mini"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 mini with alias gpt-5-mini in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_opus_4_6"
+        llm_alias="claude-opus-4-6"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.6 with alias claude-opus-4-6 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_opus_4_6"
+        llm_alias="claude-opus-4-6"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.6 with alias claude-opus-4-6 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_google_gemma_3_27b_it"
+        llm_alias="google/gemma-3-27b-it"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemma 3 27B Instruct with alias google/gemma-3-27b-it in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_google_gemma_3_27b_it"
+        llm_alias="google/gemma-3-27b-it"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemma 3 27B Instruct with alias google/gemma-3-27b-it in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_chat_latest"
+        llm_alias="gpt-5-chat-latest"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 Instant with alias gpt-5-chat-latest in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_chat_latest"
+        llm_alias="gpt-5-chat-latest"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 Instant with alias gpt-5-chat-latest in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_codex"
+        llm_alias="gpt-5-codex"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 Codex with alias gpt-5-codex in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_codex"
+        llm_alias="gpt-5-codex"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5 Codex with alias gpt-5-codex in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_1_codex_max"
+        llm_alias="gpt-5.1-codex-max"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Codex Max with alias gpt-5.1-codex-max in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_1_codex_max"
+        llm_alias="gpt-5.1-codex-max"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.1 Codex Max with alias gpt-5.1-codex-max in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2"
+        llm_alias="gpt-5.2"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Reasoning with alias gpt-5.2 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2"
+        llm_alias="gpt-5.2"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Reasoning with alias gpt-5.2 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2_chat_latest_high_reasoning"
+        llm_alias="gpt-5.2-chat-latest-high-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Instant high reasoning with alias gpt-5.2-chat-latest-high-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2_chat_latest_high_reasoning"
+        llm_alias="gpt-5.2-chat-latest-high-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Instant high reasoning with alias gpt-5.2-chat-latest-high-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2_chat_latest_low_reasoning"
+        llm_alias="gpt-5.2-chat-latest-low-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Instant low reasoning with alias gpt-5.2-chat-latest-low-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2_chat_latest_low_reasoning"
+        llm_alias="gpt-5.2-chat-latest-low-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Instant low reasoning with alias gpt-5.2-chat-latest-low-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2_chat_latest_medium_reasoning"
+        llm_alias="gpt-5.2-chat-latest-medium-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Instant medium reasoning with alias gpt-5.2-chat-latest-medium-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2_chat_latest_medium_reasoning"
+        llm_alias="gpt-5.2-chat-latest-medium-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Instant medium reasoning with alias gpt-5.2-chat-latest-medium-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2_codex"
+        llm_alias="gpt-5.2-codex"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Codex with alias gpt-5.2-codex in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2_codex"
+        llm_alias="gpt-5.2-codex"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Codex with alias gpt-5.2-codex in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2_pro"
+        llm_alias="gpt-5.2-pro"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Pro with alias gpt-5.2-pro in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2_pro"
+        llm_alias="gpt-5.2-pro"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 Pro with alias gpt-5.2-pro in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_3"
+        llm_alias="grok-3"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 3 with alias grok-3 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_3"
+        llm_alias="grok-3"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 3 with alias grok-3 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_3_mini"
+        llm_alias="grok-3-mini"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 3 Mini with alias grok-3-mini in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_3_mini"
+        llm_alias="grok-3-mini"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 3 Mini with alias grok-3-mini in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_0709"
+        llm_alias="grok-4-0709"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4 0709 with alias grok-4-0709 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_0709"
+        llm_alias="grok-4-0709"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4 0709 with alias grok-4-0709 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_20_beta_0309_non_reasoning"
+        llm_alias="grok-4.20-beta-0309-non-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Non-Reasoning (Beta) with alias grok-4.20-beta-0309-non-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_20_beta_0309_non_reasoning"
+        llm_alias="grok-4.20-beta-0309-non-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Non-Reasoning (Beta) with alias grok-4.20-beta-0309-non-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_20_beta_0309_reasoning"
+        llm_alias="grok-4.20-beta-0309-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Reasoning (Beta) with alias grok-4.20-beta-0309-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_20_beta_0309_reasoning"
+        llm_alias="grok-4.20-beta-0309-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Reasoning (Beta) with alias grok-4.20-beta-0309-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_20_multi_agent_beta_0309"
+        llm_alias="grok-4.20-multi-agent-beta-0309"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Multi-Agent (Beta) with alias grok-4.20-multi-agent-beta-0309 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_20_multi_agent_beta_0309"
+        llm_alias="grok-4.20-multi-agent-beta-0309"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Multi-Agent (Beta) with alias grok-4.20-multi-agent-beta-0309 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_nvidia_nvidia_nemotron_3_nano_30b_a3b_bf16"
+        llm_alias="nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using NVIDIA Nemotron 3 Nano 30B (BF16) with alias nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_nvidia_nvidia_nemotron_3_nano_30b_a3b_bf16"
+        llm_alias="nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using NVIDIA Nemotron 3 Nano 30B (BF16) with alias nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_qwen_qwen3_5_9b"
+        llm_alias="Qwen/Qwen3.5-9B"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3.5 9B with alias Qwen/Qwen3.5-9B in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_qwen_qwen3_5_9b"
+        llm_alias="Qwen/Qwen3.5-9B"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3.5 9B with alias Qwen/Qwen3.5-9B in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_3_1_pro_preview"
+        llm_alias="gemini-3.1-pro-preview"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 3.1 Pro Preview with alias gemini-3.1-pro-preview in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_3_1_pro_preview"
+        llm_alias="gemini-3.1-pro-preview"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 3.1 Pro Preview with alias gemini-3.1-pro-preview in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_3_flash_preview"
+        llm_alias="gemini-3-flash-preview"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 3 Flash Preview with alias gemini-3-flash-preview in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_3_flash_preview"
+        llm_alias="gemini-3-flash-preview"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 3 Flash Preview with alias gemini-3-flash-preview in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_3_1_flash_lite_preview"
+        llm_alias="gemini-3.1-flash-lite-preview"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 3.1 Flash-Lite Preview with alias gemini-3.1-flash-lite-preview in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_3_1_flash_lite_preview"
+        llm_alias="gemini-3.1-flash-lite-preview"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini 3.1 Flash-Lite Preview with alias gemini-3.1-flash-lite-preview in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_google_gemma_4_31b_it"
+        llm_alias="together/google/gemma-4-31b-it"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemma 4 31B Instruct with alias together/google/gemma-4-31b-it in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_google_gemma_4_31b_it"
+        llm_alias="together/google/gemma-4-31b-it"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemma 4 31B Instruct with alias together/google/gemma-4-31b-it in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_zai_org_glm_5_1"
+        llm_alias="together/zai-org/glm-5.1"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GLM-5.1 with alias together/zai-org/glm-5.1 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_zai_org_glm_5_1"
+        llm_alias="together/zai-org/glm-5.1"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GLM-5.1 with alias together/zai-org/glm-5.1 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_qwen_qwen3_coder_next_fp8"
+        llm_alias="together/qwen/qwen3-coder-next-fp8"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3-Coder-Next with alias together/qwen/qwen3-coder-next-fp8 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_qwen_qwen3_coder_next_fp8"
+        llm_alias="together/qwen/qwen3-coder-next-fp8"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3-Coder-Next with alias together/qwen/qwen3-coder-next-fp8 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_qwen_qwen3_235b_a22b_instruct_2507_tput"
+        llm_alias="together/qwen/qwen3-235b-a22b-instruct-2507-tput"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3 235B A22B Instruct 2507 with alias together/qwen/qwen3-235b-a22b-instruct-2507-tput in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_qwen_qwen3_235b_a22b_instruct_2507_tput"
+        llm_alias="together/qwen/qwen3-235b-a22b-instruct-2507-tput"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3 235B A22B Instruct 2507 with alias together/qwen/qwen3-235b-a22b-instruct-2507-tput in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_deepseek_ai_deepseek_r1"
+        llm_alias="together/deepseek-ai/deepseek-r1"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using DeepSeek-R1-0528 with alias together/deepseek-ai/deepseek-r1 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_deepseek_ai_deepseek_r1"
+        llm_alias="together/deepseek-ai/deepseek-r1"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using DeepSeek-R1-0528 with alias together/deepseek-ai/deepseek-r1 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_moonshotai_kimi_k2_5"
+        llm_alias="together/moonshotai/kimi-k2.5"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Kimi K2.5 with alias together/moonshotai/kimi-k2.5 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_moonshotai_kimi_k2_5"
+        llm_alias="together/moonshotai/kimi-k2.5"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Kimi K2.5 with alias together/moonshotai/kimi-k2.5 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_moonshotai_kimi_k2_6"
+        llm_alias="together/moonshotai/kimi-k2.6"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Kimi K2.6 with alias together/moonshotai/kimi-k2.6 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_moonshotai_kimi_k2_6"
+        llm_alias="together/moonshotai/kimi-k2.6"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Kimi K2.6 with alias together/moonshotai/kimi-k2.6 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_minimaxai_minimax_m2_5"
+        llm_alias="together/minimaxai/minimax-m2.5"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using MiniMax M2.5 with alias together/minimaxai/minimax-m2.5 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_minimaxai_minimax_m2_5"
+        llm_alias="together/minimaxai/minimax-m2.5"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using MiniMax M2.5 with alias together/minimaxai/minimax-m2.5 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_minimaxai_minimax_m2_7"
+        llm_alias="together/minimaxai/minimax-m2.7"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using MiniMax M2.7 with alias together/minimaxai/minimax-m2.7 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_minimaxai_minimax_m2_7"
+        llm_alias="together/minimaxai/minimax-m2.7"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using MiniMax M2.7 with alias together/minimaxai/minimax-m2.7 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_essentialai_rnj_1_instruct"
+        llm_alias="together/essentialai/rnj-1-instruct"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Rnj-1 Instruct with alias together/essentialai/rnj-1-instruct in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_essentialai_rnj_1_instruct"
+        llm_alias="together/essentialai/rnj-1-instruct"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Rnj-1 Instruct with alias together/essentialai/rnj-1-instruct in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_4"
+        llm_alias="gpt-5.4"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 medium reasoning with alias gpt-5.4 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_4"
+        llm_alias="gpt-5.4"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 medium reasoning with alias gpt-5.4 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_4_low_reasoning"
+        llm_alias="gpt-5.4-low-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 low reasoning with alias gpt-5.4-low-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_4_low_reasoning"
+        llm_alias="gpt-5.4-low-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 low reasoning with alias gpt-5.4-low-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_4_high_reasoning"
+        llm_alias="gpt-5.4-high-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 high reasoning with alias gpt-5.4-high-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_4_high_reasoning"
+        llm_alias="gpt-5.4-high-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 high reasoning with alias gpt-5.4-high-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_4_xhigh_reasoning"
+        llm_alias="gpt-5.4-xhigh-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 xhigh reasoning with alias gpt-5.4-xhigh-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_4_xhigh_reasoning"
+        llm_alias="gpt-5.4-xhigh-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 xhigh reasoning with alias gpt-5.4-xhigh-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_5"
+        llm_alias="gpt-5.5"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 medium reasoning with alias gpt-5.5 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_5"
+        llm_alias="gpt-5.5"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 medium reasoning with alias gpt-5.5 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_5_low_reasoning"
+        llm_alias="gpt-5.5-low-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 low reasoning with alias gpt-5.5-low-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_5_low_reasoning"
+        llm_alias="gpt-5.5-low-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 low reasoning with alias gpt-5.5-low-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_5_high_reasoning"
+        llm_alias="gpt-5.5-high-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 high reasoning with alias gpt-5.5-high-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_5_high_reasoning"
+        llm_alias="gpt-5.5-high-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 high reasoning with alias gpt-5.5-high-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_5_xhigh_reasoning"
+        llm_alias="gpt-5.5-xhigh-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 xhigh reasoning with alias gpt-5.5-xhigh-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_5_xhigh_reasoning"
+        llm_alias="gpt-5.5-xhigh-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 xhigh reasoning with alias gpt-5.5-xhigh-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_5_pro"
+        llm_alias="gpt-5.5-pro"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 pro with alias gpt-5.5-pro in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_5_pro"
+        llm_alias="gpt-5.5-pro"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.5 pro with alias gpt-5.5-pro in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_4_mini"
+        llm_alias="gpt-5.4-mini"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 mini with alias gpt-5.4-mini in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_4_mini"
+        llm_alias="gpt-5.4-mini"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 mini with alias gpt-5.4-mini in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_4_nano"
+        llm_alias="gpt-5.4-nano"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 nano with alias gpt-5.4-nano in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_4_nano"
+        llm_alias="gpt-5.4-nano"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 nano with alias gpt-5.4-nano in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_4_pro"
+        llm_alias="gpt-5.4-pro"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 pro with alias gpt-5.4-pro in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_4_pro"
+        llm_alias="gpt-5.4-pro"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.4 pro with alias gpt-5.4-pro in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_3_codex"
+        llm_alias="gpt-5.3-codex"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.3 Codex with alias gpt-5.3-codex in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_3_codex"
+        llm_alias="gpt-5.3-codex"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.3 Codex with alias gpt-5.3-codex in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2_low_reasoning"
+        llm_alias="gpt-5.2-low-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 low reasoning with alias gpt-5.2-low-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2_low_reasoning"
+        llm_alias="gpt-5.2-low-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 low reasoning with alias gpt-5.2-low-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2_high_reasoning"
+        llm_alias="gpt-5.2-high-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 high reasoning with alias gpt-5.2-high-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2_high_reasoning"
+        llm_alias="gpt-5.2-high-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 high reasoning with alias gpt-5.2-high-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gpt_5_2_xhigh_reasoning"
+        llm_alias="gpt-5.2-xhigh-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 xhigh reasoning with alias gpt-5.2-xhigh-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gpt_5_2_xhigh_reasoning"
+        llm_alias="gpt-5.2-xhigh-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GPT-5.2 xhigh reasoning with alias gpt-5.2-xhigh-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_qwen_qwen3_5_397b_a17b"
+        llm_alias="together/qwen/qwen3.5-397b-a17b"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3.5 397B A17B with alias together/qwen/qwen3.5-397b-a17b in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_qwen_qwen3_5_397b_a17b"
+        llm_alias="together/qwen/qwen3.5-397b-a17b"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Qwen3.5 397B A17B with alias together/qwen/qwen3.5-397b-a17b in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_zai_org_glm_5"
+        llm_alias="together/zai-org/glm-5"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GLM-5 with alias together/zai-org/glm-5 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_zai_org_glm_5"
+        llm_alias="together/zai-org/glm-5"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using GLM-5 with alias together/zai-org/glm-5 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_flash_latest"
+        llm_alias="gemini-flash-latest"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini Flash (latest) with alias gemini-flash-latest in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_flash_latest"
+        llm_alias="gemini-flash-latest"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini Flash (latest) with alias gemini-flash-latest in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_gemini_pro_latest"
+        llm_alias="gemini-pro-latest"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini Pro (latest) with alias gemini-pro-latest in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_gemini_pro_latest"
+        llm_alias="gemini-pro-latest"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Gemini Pro (latest) with alias gemini-pro-latest in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_opus_4_7"
+        llm_alias="claude-opus-4-7"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.7 with alias claude-opus-4-7 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_opus_4_7"
+        llm_alias="claude-opus-4-7"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Opus 4.7 with alias claude-opus-4-7 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_claude_sonnet_4_6"
+        llm_alias="claude-sonnet-4-6"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Sonnet 4.6 with alias claude-sonnet-4-6 in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_claude_sonnet_4_6"
+        llm_alias="claude-sonnet-4-6"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Claude Sonnet 4.6 with alias claude-sonnet-4-6 in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_20_reasoning"
+        llm_alias="grok-4.20-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Reasoning with alias grok-4.20-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_20_reasoning"
+        llm_alias="grok-4.20-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Reasoning with alias grok-4.20-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_grok_4_20_non_reasoning"
+        llm_alias="grok-4.20-non-reasoning"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Non-Reasoning with alias grok-4.20-non-reasoning in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_grok_4_20_non_reasoning"
+        llm_alias="grok-4.20-non-reasoning"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using Grok 4.20 Non-Reasoning with alias grok-4.20-non-reasoning in model mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="direct_together_deepseek_ai_deepseek_v4_pro"
+        llm_alias="together/deepseek-ai/deepseek-v4-pro"
+        mode="direct"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using DeepSeek-V4-Pro with alias together/deepseek-ai/deepseek-v4-pro in direct mode.</description>
+    </endpoint>
+
+    <endpoint
+        id="model_together_deepseek_ai_deepseek_v4_pro"
+        llm_alias="together/deepseek-ai/deepseek-v4-pro"
+        mode="model"
+        role="review_and_improve"
+        timeout="900"
+        request_timeout="30"
+        retry_delay="5">
+        <description>Endpoint using DeepSeek-V4-Pro with alias together/deepseek-ai/deepseek-v4-pro in model mode.</description>
+    </endpoint>
+
+</endpointCatalog>
