@@ -6,9 +6,8 @@ from pathlib import Path
 from constructor_agent.config_loader import XmlQuestionConfigLoader
 from constructor_agent.domain import AgentState, QuestionPathConfig
 from constructor_agent.graph_builder import AgentGraphBuilder
-
+from constructor_agent.platform_config import ConstructorPlatformConfig
 from constructor_agent.stateful_constructor_client import (
-    ConstructorPlatformConfig,
     ConstructorQuestionCandidate,
     StatefulConstructorClient,
 )

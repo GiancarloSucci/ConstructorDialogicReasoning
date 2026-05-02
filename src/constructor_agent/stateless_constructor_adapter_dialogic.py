@@ -9,9 +9,7 @@ import xml.etree.ElementTree as ET
 import requests
 
 from constructor_adapter import StatelessConstructorAdapter
-
-
-DEFAULT_API_URL = "https://training.constructor.app/api/platform-kmapi/v1"
+from constructor_agent.platform_config import DEFAULT_API_URL
 
 
 @dataclass(frozen=True)
@@ -43,9 +41,20 @@ class StatelessConstructorAdapterDialogic(StatelessConstructorAdapter):
     StatelessConstructorAdapter.query().
 
     If an XML configuration is loaded, query() executes the prompt through the
-    configured sequence of questions. Each question after the first can refer to
-    the previous answer through {answer}. It can also refer to any previous
-    question by id, for example {review.prompt} and {review.answer}.
+    configured sequence of questions.
+
+    Placeholder semantics:
+        {prompt}
+            Original user prompt.
+
+        {answer}
+            Answer produced by the previous question.
+
+        {question_id.prompt}
+            Prompt actually sent to a previous question.
+
+        {question_id.answer}
+            Answer produced by a previous question.
     """
 
     def __init__(self, **kwargs: Any) -> None:
@@ -99,7 +108,7 @@ class StatelessConstructorAdapterDialogic(StatelessConstructorAdapter):
             )
 
             prompt_node = question_node.find("prompt")
-            prompt = (
+            question_prompt = (
                 prompt_node.text.strip()
                 if prompt_node is not None and prompt_node.text
                 else None
@@ -112,7 +121,7 @@ class StatelessConstructorAdapterDialogic(StatelessConstructorAdapter):
                     mode=mode,
                     role=role,
                     description=description,
-                    prompt=prompt,
+                    prompt=question_prompt,
                     timeout=int(question_node.attrib.get("timeout", "300")),
                     request_timeout=int(
                         question_node.attrib.get("request_timeout", "15")
@@ -137,6 +146,11 @@ class StatelessConstructorAdapterDialogic(StatelessConstructorAdapter):
         if self.dialogic_configuration is None:
             return super().query(prompt, **kwargs)
 
+        if not prompt.strip():
+            raise ValueError("The prompt is empty.")
+
+        original_prompt = prompt.strip()
+
         current_answer: Optional[str] = None
         current_question_id: Optional[str] = None
         prompt_by_question_id: dict[str, str] = {}
@@ -147,7 +161,7 @@ class StatelessConstructorAdapterDialogic(StatelessConstructorAdapter):
             effective_question = self._effective_question(question)
 
             question_prompt = self._build_dialogic_prompt(
-                original_prompt=prompt,
+                original_prompt=original_prompt,
                 question=effective_question,
                 previous_question_id=current_question_id,
                 previous_answer=current_answer,
@@ -158,7 +172,7 @@ class StatelessConstructorAdapterDialogic(StatelessConstructorAdapter):
             answer = self._query_single_question(
                 question=effective_question,
                 prompt=question_prompt,
-                **kwargs,
+                default_kwargs=kwargs,
             )
 
             prompt_by_question_id[effective_question.id] = question_prompt
@@ -190,7 +204,7 @@ class StatelessConstructorAdapterDialogic(StatelessConstructorAdapter):
         self,
         question: DialogicQuestion,
         prompt: str,
-        **kwargs: Any,
+        default_kwargs: dict[str, Any],
     ) -> str:
         adapter = StatelessConstructorAdapter(
             mode=question.mode,
@@ -200,7 +214,13 @@ class StatelessConstructorAdapterDialogic(StatelessConstructorAdapter):
             llm_alias=question.llm_alias,
         )
 
-        return adapter.query(prompt, **kwargs)
+        query_kwargs = dict(default_kwargs)
+
+        query_kwargs.setdefault("timeout", question.timeout)
+        query_kwargs.setdefault("request_timeout", question.request_timeout)
+        query_kwargs.setdefault("retry_delay", question.retry_delay)
+
+        return adapter.query(prompt, **query_kwargs)
 
     def _build_dialogic_prompt(
         self,

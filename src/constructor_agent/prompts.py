@@ -43,7 +43,10 @@ class PromptFactory:
             replacements[f"{exchange.question_id}.prompt"] = exchange.prompt
             replacements[f"{exchange.question_id}.answer"] = exchange.answer
 
-        return PromptFactory._replace_placeholders(question.prompt or "", replacements)
+        return PromptFactory._replace_placeholders(
+            question.prompt or "",
+            replacements,
+        )
 
     @staticmethod
     def _replace_placeholders(template: str, replacements: dict[str, str]) -> str:

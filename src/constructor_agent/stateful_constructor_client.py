@@ -1,67 +1,13 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
-import os
 import time
-from typing import Any, Optional
+from typing import Any
 
 import requests
 
 from constructor_agent.domain import QuestionSpec
-
-
-DEFAULT_API_URL = "https://training.constructor.app/api/platform-kmapi/v1"
-
-
-@dataclass(frozen=True)
-class ConstructorPlatformConfig:
-    """Connection parameters for ConstructorAdapter."""
-
-    api_url: Optional[str] = None
-    api_key: Optional[str] = None
-    km_id: Optional[str] = None
-
-    @classmethod
-    def from_environment(cls) -> "ConstructorPlatformConfig":
-        return cls(
-            api_url=os.getenv("CONSTRUCTOR_API_URL"),
-            api_key=os.getenv("CONSTRUCTOR_API_KEY"),
-            km_id=os.getenv("CONSTRUCTOR_KM_ID") or os.getenv("KNOWLEDGE_MODEL_ID"),
-        )
-
-    def resolved_api_url(self) -> str:
-        return (
-            self.api_url
-            or os.getenv("CONSTRUCTOR_API_URL")
-            or DEFAULT_API_URL
-        ).rstrip("/")
-
-    def resolved_api_key(self) -> str:
-        api_key = self.api_key or os.getenv("CONSTRUCTOR_API_KEY")
-        if not api_key:
-            raise RuntimeError("Missing CONSTRUCTOR_API_KEY.")
-        return api_key
-
-    def resolved_km_id(self, optional: bool = False) -> str | None:
-        km_id = (
-            self.km_id
-            or os.getenv("CONSTRUCTOR_KM_ID")
-            or os.getenv("KNOWLEDGE_MODEL_ID")
-        )
-
-        if km_id is not None:
-            km_id = km_id.strip()
-
-        if km_id:
-            return km_id
-
-        if optional:
-            return None
-
-        raise RuntimeError(
-            "Missing CONSTRUCTOR_KM_ID or KNOWLEDGE_MODEL_ID. "
-            "Use mode='direct' or configure a knowledge model id."
-        )
+from constructor_agent.platform_config import ConstructorPlatformConfig
 
 
 @dataclass(frozen=True)
@@ -84,22 +30,17 @@ class ConstructorQuestionCandidate:
 
 class StatefulConstructorClient:
     """
-    Concrete adapter around constructor_adapter.StatefulConstructorAdapter.
+    Client around constructor_adapter.StatefulConstructorAdapter.
 
-    One StatefulConstructorAdapter instance is cached per effective
-    (llm_alias, mode), so each question keeps its own Constructor chat session
-    during one run.
-
-    Important implementation detail:
-    ConstructorAdapter currently requires a knowledge model id even for direct
-    mode, because StatefulConstructorAdapter creates chat sessions under
-    /knowledge-models/{km_id}/chat-sessions. Therefore, this wrapper creates
-    a temporary empty knowledge model when the configured km_id is missing,
-    invalid, or inaccessible.
+    This client is used by the LangGraph path. It keeps one stateful adapter
+    per effective (llm_alias, mode). If the configured knowledge model is
+    missing or inaccessible, direct mode creates a temporary empty knowledge
+    model because StatefulConstructorAdapter still needs a KM id to open a
+    chat session.
     """
 
     def __init__(self, config: ConstructorPlatformConfig | None = None) -> None:
-        self.config = config or ConstructorPlatformConfig()
+        self.config = config or ConstructorPlatformConfig.from_environment()
         self._adapters: dict[tuple[str, str], object] = {}
         self._force_direct_mode = False
         self._direct_warning_printed = False

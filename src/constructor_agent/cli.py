@@ -8,7 +8,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
-from constructor_agent.stateful_constructor_client import ConstructorPlatformConfig
+from constructor_agent.platform_config import ConstructorPlatformConfig
 from constructor_agent.query_provider import FileQueryProvider, InlineQueryProvider
 from constructor_agent.runner import ConstructorAgentRunner
 

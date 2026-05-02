@@ -38,7 +38,9 @@ class XmlQuestionConfigLoader:
         llm_alias = node.attrib.get("llm_alias") or node.attrib.get("model")
 
         if not llm_alias:
-            raise ValueError(f"Question '{question_id}' must define llm_alias or model.")
+            raise ValueError(
+                f"Question '{question_id}' must define llm_alias or model."
+            )
 
         mode = node.attrib.get("mode", "direct")
 

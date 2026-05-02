@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Annotated, Literal, Optional, TypedDict
 import operator
+from typing import Annotated, Literal, Optional, TypedDict
+
 
 Mode = Literal["direct", "model"]
 
@@ -36,10 +37,14 @@ class QuestionPathConfig:
             )
 
         ids = [question.id for question in self.questions]
-        duplicated = sorted({question_id for question_id in ids if ids.count(question_id) > 1})
+        duplicated = sorted(
+            {question_id for question_id in ids if ids.count(question_id) > 1}
+        )
 
         if duplicated:
-            raise ValueError(f"Duplicated question ids in XML configuration: {duplicated}")
+            raise ValueError(
+                f"Duplicated question ids in XML configuration: {duplicated}"
+            )
 
 
 @dataclass(frozen=True)

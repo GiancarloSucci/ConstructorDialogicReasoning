@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
-from constructor_agent.stateful_constructor_client import ConstructorPlatformConfig
+from constructor_agent.platform_config import ConstructorPlatformConfig
 from constructor_agent.stateless_constructor_adapter_dialogic import (
     StatelessConstructorAdapterDialogic,
 )
@@ -16,15 +16,12 @@ class StatelessClientRunResult:
     configuration_path: Optional[Path]
 
 
-class StatelessConstructorClient:
+class ConstructorStatelessClient:
     """
     Thin client around StatelessConstructorAdapterDialogic.
 
-    This client is useful when the dialogic execution should be performed
-    through a ConstructorAdapter-compatible object without LangGraph and without
-    StatefulConstructorAdapter sessions.
-
-    The XML configuration is loaded by StatelessConstructorAdapterDialogic.
+    This client executes the XML-defined dialogic path without LangGraph and
+    without StatefulConstructorAdapter sessions.
     """
 
     def __init__(
@@ -34,10 +31,14 @@ class StatelessConstructorClient:
         mode: str = "direct",
         configuration_path: str | Path | None = None,
     ) -> None:
-        self.platform_config = platform_config or ConstructorPlatformConfig.from_environment()
+        self.platform_config = (
+            platform_config or ConstructorPlatformConfig.from_environment()
+        )
         self.llm_alias = llm_alias
         self.mode = mode
-        self.configuration_path = Path(configuration_path) if configuration_path else None
+        self.configuration_path = (
+            Path(configuration_path) if configuration_path is not None else None
+        )
 
         self.adapter = StatelessConstructorAdapterDialogic(
             mode=self.mode,
@@ -57,7 +58,7 @@ class StatelessConstructorClient:
         platform_config: ConstructorPlatformConfig | None = None,
         llm_alias: str = "gpt-4o-mini",
         mode: str = "direct",
-    ) -> "StatelessConstructorClient":
+    ) -> "ConstructorStatelessClient":
         return cls(
             platform_config=platform_config,
             llm_alias=llm_alias,
@@ -73,6 +74,7 @@ class StatelessConstructorClient:
 
     def load_configuration(self, configuration_path: str | Path) -> None:
         path = Path(configuration_path)
+
         self.adapter.loadConfiguration(path)
         self.configuration_path = path
 
@@ -111,3 +113,7 @@ class StatelessConstructorClient:
             final_answer=answer,
             configuration_path=self.configuration_path,
         )
+
+
+# Temporary alias if some local code still imports StatelessConstructorClient.
+StatelessConstructorClient = ConstructorStatelessClient

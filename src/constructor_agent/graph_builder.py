@@ -5,10 +5,15 @@ from collections.abc import Callable
 from langchain_core.messages import HumanMessage
 from langgraph.graph import END, StateGraph
 
-from constructor_agent.stateful_constructor_client import StatefulConstructorClient
-from constructor_agent.domain import AgentState, QuestionExchange, QuestionPathConfig, QuestionSpec
+from constructor_agent.domain import (
+    AgentState,
+    QuestionExchange,
+    QuestionPathConfig,
+    QuestionSpec,
+)
 from constructor_agent.langchain_constructor_model import ConstructorStatefulChatModel
 from constructor_agent.prompts import PromptFactory
+from constructor_agent.stateful_constructor_client import StatefulConstructorClient
 
 
 class AgentGraphBuilder:
@@ -24,6 +29,7 @@ class AgentGraphBuilder:
 
     def build(self, config: QuestionPathConfig):
         config.validate()
+
         graph = StateGraph(AgentState)
 
         for question in config.questions:
@@ -32,7 +38,10 @@ class AgentGraphBuilder:
         graph.add_node("finalize", self._finalize)
         graph.set_entry_point(config.questions[0].id)
 
-        for current_question, next_question in zip(config.questions, config.questions[1:]):
+        for current_question, next_question in zip(
+            config.questions,
+            config.questions[1:],
+        ):
             graph.add_edge(current_question.id, next_question.id)
 
         graph.add_edge(config.questions[-1].id, "finalize")
@@ -40,10 +49,18 @@ class AgentGraphBuilder:
 
         return graph.compile()
 
-    def _node_for_question(self, question: QuestionSpec) -> Callable[[AgentState], dict]:
+    def _node_for_question(
+        self,
+        question: QuestionSpec,
+    ) -> Callable[[AgentState], dict]:
         def node(state: AgentState) -> dict:
             prompt = self.prompt_factory.build_question_prompt(question, state)
-            model = ConstructorStatefulChatModel(client=self.client, question=question)
+
+            model = ConstructorStatefulChatModel(
+                client=self.client,
+                question=question,
+            )
+
             result = model.invoke([HumanMessage(content=prompt)])
             answer = str(result.content)
 
