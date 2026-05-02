@@ -20,7 +20,7 @@ Return only the answer.
 
     <question
         id="review"
-        llm_alias="gemini-2.0-flash"
+        llm_alias="claude-opus-4-7"
         mode="direct"
         role="review_and_improve"
         timeout="900"
