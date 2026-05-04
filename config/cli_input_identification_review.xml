@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questionPath name="cli-input-identification-dialogue-review">
+    <question
+        id="repository_cli_scan"
+        llm_alias="gpt-4o-mini"
+        mode="direct"
+        role="repository_cli_scanner"
+        timeout="240"
+        request_timeout="30"
+        retry_delay="5">
+        <description>
+            Identify likely command-line entry points and input requirements from repository evidence.
+        </description>
+        <prompt>
+Original user request:
+{prompt}
+
+You are analyzing a software repository in order to identify how it can be executed from the command line.
+
+Task:
+Produce an initial technical assessment of the repository CLI interface.
+
+Focus on:
+1. likely executable files;
+2. files containing if __name__ == "__main__";
+3. scripts declared in pyproject.toml, setup.py, setup.cfg, Makefile, shell scripts, or README files;
+4. argparse, click, typer, fire, hydra, configargparse, absl, docopt, or custom sys.argv parsing;
+5. required positional arguments;
+6. optional arguments;
+7. expected input file types;
+8. expected input directories;
+9. default values;
+10. examples of possible commands.
+
+Return a structured report with these sections:
+- Candidate entry points
+- CLI parsing mechanisms
+- Required inputs
+- Optional inputs
+- File and directory inputs
+- Environment variables
+- Evidence still missing
+- Initial executable command hypotheses
+
+Use only evidence provided in the original request. If the request does not contain repository evidence, state what information is needed.
+        </prompt>
+    </question>
+
+    <question
+        id="input_semantics_inference"
+        llm_alias="gemini-2.5-flash"
+        mode="direct"
+        role="input_semantics_inference"
+        timeout="240"
+        request_timeout="30"
+        retry_delay="5">
+        <description>
+            Infer the semantic meaning of CLI inputs and propose minimal valid test inputs.
+        </description>
+        <prompt>
+Original user request:
+{prompt}
+
+Initial CLI scan:
+{repository_cli_scan.answer}
+
+You are the second analyst in a dialogue among LLMs.
+
+Task:
+Infer the semantic meaning of the CLI inputs identified by the first analyst.
+
+For each candidate entry point:
+1. explain what the program appears to do;
+2. explain what each required input probably represents;
+3. identify whether each input is a path, file, directory, integer, float, string, enum, flag, URL, model name, dataset name, or configuration object;
+4. infer minimal valid input values for a smoke test;
+5. infer likely file extensions and minimal file contents when possible;
+6. identify inputs that cannot be safely guessed;
+7. identify inputs that require repository-specific data.
+
+Return:
+- Refined input schema per entry point
+- Minimal smoke-test command per entry point
+- Synthetic input files that may be needed
+- Inputs that must not be guessed
+- Open questions for the next reviewer
+
+Do not invent repository facts. Separate evidence-based conclusions from hypotheses.
+        </prompt>
+    </question>
+
+    <question
+        id="execution_risk_review"
+        llm_alias="claude-haiku-4-5"
+        mode="direct"
+        role="execution_risk_reviewer"
+        timeout="240"
+        request_timeout="30"
+        retry_delay="5">
+        <description>
+            Review the inferred CLI inputs for execution risks, unsupported assumptions, and reproducibility problems.
+        </description>
+        <prompt>
+Original user request:
+{prompt}
+
+Initial CLI scan:
+{repository_cli_scan.answer}
+
+Input semantics inference:
+{input_semantics_inference.answer}
+
+You are the third analyst in a dialogue among LLMs.
+
+Task:
+Critically review the proposed CLI input identification.
+
+Check:
+1. whether candidate entry points are justified by evidence;
+2. whether required inputs are complete;
+3. whether any inferred input values are unsafe or unsupported;
+4. whether any generated synthetic files could cause misleading execution results;
+5. whether the proposed smoke tests are likely to terminate;
+6. whether the commands risk starting training, downloading large datasets, using GPUs, writing many files, or calling external services;
+7. whether additional static analysis is required before execution.
+
+Return:
+- Accepted assumptions
+- Rejected assumptions
+- High-risk commands
+- Safer alternative commands
+- Missing repository evidence
+- Recommended constraints for execution
+- Revised smoke-test plan
+
+Prefer conservative execution. The goal is to identify CLI inputs, not to run expensive experiments.
+        </prompt>
+    </question>
+
+    <question
+        id="final_cli_input_plan"
+        llm_alias="gpt-5-mini"
+        mode="direct"
+        role="final_cli_input_identification_plan"
+        timeout="300"
+        request_timeout="30"
+        retry_delay="5">
+        <description>
+            Produce the final project-review answer: a precise CLI input identification plan for repository execution.
+        </description>
+        <prompt>
+Original user request:
+{prompt}
+
+CLI scan:
+{repository_cli_scan.answer}
+
+Input semantics inference:
+{input_semantics_inference.answer}
+
+Execution risk review:
+{execution_risk_review.answer}
+
+You are the final analyst.
+
+Task:
+Produce the final answer for a project review.
+
+The answer must explain how the multi-LLM dialogue identifies CLI inputs for a repository.
+
+Include:
+1. the objective of the dialogue;
+2. the role of each LLM step;
+3. the expected input to the dialogue;
+4. the expected output of the dialogue;
+5. the final CLI input schema format;
+6. the final command-generation format;
+7. how uncertainty is represented;
+8. how unsafe or expensive commands are avoided;
+9. how the result can be used by an automated repository execution system;
+10. a compact example of the final output schema.
+
+The final output schema must include:
+- entry_point
+- invocation_type
+- confidence
+- evidence
+- required_arguments
+- optional_arguments
+- required_files
+- required_directories
+- environment_variables
+- generated_test_files
+- smoke_test_command
+- forbidden_or_risky_commands
+- unresolved_questions
+
+Return the answer in English.
+Use a scientific and technical style.
+Avoid marketing language.
+        </prompt>
+    </question>
+
+</questionPath>

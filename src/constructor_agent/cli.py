@@ -73,6 +73,11 @@ def run(
         "--show-trace",
         help="Show all intermediate question answers.",
     ),
+    show_step_io: bool = typer.Option(
+        False,
+        "--show-step-io",
+        help="Show the full prompt/query and answer for each question step.",
+    ),
 ) -> None:
     user_prompt = _read_prompt(prompt, prompt_file)
 
@@ -88,17 +93,24 @@ def run(
     console.print(Panel(result.final_answer, title="Final answer"))
     console.print(Panel(result.explanation, title="How the answer was produced"))
 
-    if show_trace:
+    if show_trace or show_step_io:
         for i, exchange in enumerate(result.state.get("exchanges", []), start=1):
-            console.print(
-                Panel(
-                    exchange.answer,
-                    title=(
-                        f"Question {i}: {exchange.question_id} / "
-                        f"{exchange.llm_alias} / {exchange.mode}"
-                    ),
-                )
+            title = (
+                f"Question {i}: {exchange.question_id} / "
+                f"{exchange.llm_alias} / {exchange.mode}"
             )
+            if show_step_io:
+                content = (
+                    "QUERY SENT TO MODEL\n"
+                    "===================\n"
+                    f"{exchange.prompt}\n\n"
+                    "ANSWER RECEIVED FROM MODEL\n"
+                    "==========================\n"
+                    f"{exchange.answer}"
+                )
+            else:
+                content = exchange.answer
+            console.print(Panel(content, title=title))
 
 
 @app.command("list-questions")
